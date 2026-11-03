@@ -399,7 +399,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 @media (max-width: 560px) {
   .hero-bottom { flex-direction: column; align-items: flex-start; bottom: 110px; }
   /* Center the foreground crest between the nav and the intro on phones. */
-  .hero-crest { top: calc(50% - 90px); height: clamp(140px, 23svh, 200px); }
+  .hero-crest { top: 38svh; height: clamp(180px, 34svh, 320px); }
   .hero-wm { background-size: auto 52%; }
   .hero-links { flex-direction: row; gap: 20px; text-align: left; }
   .hero-links a { margin-left: 0; }
@@ -493,4 +493,4 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .project-images-grid { grid-template-columns: 1fr; }
   .project-pn { flex-direction: column; }
   .pn-next { text-align: left; margin-left: 0; }
-   }
+}
