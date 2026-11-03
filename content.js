@@ -105,7 +105,7 @@ window.SITE = {
         { role: "Cinematographer", name: "Dylan Yuan" },
         { role: "Assistant Camera Operator / Camera Operator", name: "James Murphy" }
       ] },
-    { slug: "future-presence-passed", title: "Future Presence Passed", type: "Short film", year: "", releaseDate: "2026-05-15",
+    { slug: "future-presence-passed", title: "Future Presence Passed", type: "Short film", year: "2026", releaseDate: "2026-05-15",
       image: "assets/future-presence-passed-card.jpg", videoUrl: "https://www.youtube.com/watch?v=eVz5IkvKdgk&t=338s",
       images: ["assets/future-presence-passed-1.jpg", "assets/future-presence-passed-2.jpg", "assets/future-presence-passed-3.jpg", "assets/future-presence-passed-4.jpg", "assets/future-presence-passed-5.jpg", "assets/future-presence-passed-6.jpg"],
       credits: [
