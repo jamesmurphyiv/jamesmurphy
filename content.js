@@ -44,13 +44,13 @@ window.SITE = {
 
   /* ---------- HOME: STATS STRIP (scrolling under the hero) ---------- */
   brandStrip: [
-    "20 CREDITS AT 16", "1.1M+ TOTAL VIEWS", "~1.7M HOURS WATCHED (EST.)",
+    "15 CREDITS AT 16", "1.1M+ TOTAL VIEWS", "~1.7M HOURS WATCHED (EST.)",
     "2 FEATURE FILMS", "8 SHORT FILMS", "1 DOCUMENTARY",
     "11 PROJECTS", "FOUNDING APPERT FILMS"
   ],
 
   /* ---------- HOME: STATEMENT (lights up word by word as you scroll) ---------- */
-  statement: "Twenty credits at sixteen. Director, producer, DP, actor - whatever the film needs, that's me. Now I'm building Appert Films into a real studio.",
+  statement: "Fifteen credits at sixteen. Director, producer, DP, actor - whatever the film needs, that's me.",
 
   /* ---------- HOME: FEATURED PROJECTS (grid under the statement) ---------- */
   featuredTitle: "Projects",
@@ -185,7 +185,7 @@ window.SITE = {
       "He is the founder of Appert Films, a production and distribution house built from scratch, and he shoots with whatever is in his hands."
     ],
     facts: [
-      { label: "Based in",  value: "New Jersey & Palm Beach" },
+      { label: "Based in",  value: "Palm Beach, Florida & New York, New York" },
       { label: "Focus",     value: "Narrative fiction, documentary" },
       { label: "Studio",    value: "Appert Films" },
       { label: "Contact",   value: "jmurphy@appertfilms.com" }
@@ -203,7 +203,7 @@ window.SITE = {
     headline: "Freelance.",
     statement: "Everything I take on, I do with an artist's intentionality.",
     intro: [
-      "I'm a director, cinematographer and producer with 20 film credits and over 1.1 million views on released work - and I take on select freelance projects.",
+      "I'm a director, cinematographer and producer with 15 film credits and over 1.1 million views on released work - and I take on select freelance projects.",
       "Music video, short film, commercial or live broadcast: I bring the same thing to every job. Nothing in the frame is an accident, and nothing leaves my hands until it says what it was meant to say."
     ],
     servicesTitle: "Services",
