@@ -11,7 +11,7 @@
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  document.title = S.name + (PAGE === "film" ? " - Film" : PAGE === "about" ? " - About" : PAGE === "project" ? " - Film" : "");
+  document.title = S.name + ({ film: " - Film", about: " - About", project: " - Film", freelance: " - Freelance", resume: " - Resume" }[PAGE] || "");
 
   /* ============ YOUTUBE HELPERS ============ */
   function ytId(url) {
@@ -57,12 +57,13 @@
   function renderHeader() {
     const h = $("#siteHeader");
     if (!h) return;
+    const pageFile = PAGE === "home" ? "index" : PAGE;
     h.innerHTML = `
       <a class="monogram" href="index.html" aria-label="${esc(S.name)}"><img src="assets/crest.png" alt="${esc(S.name)}"></a>
       <nav class="main-nav">
         ${S.nav.map((n) => n.url === "#contact"
           ? `<a href="#contact" data-open-contact>${esc(n.label)}</a>`
-          : `<a href="${esc(n.url)}" class="${PAGE && n.url.indexOf(PAGE) === 0 ? "active" : ""}">${esc(n.label)}</a>`).join("")}
+          : `<a href="${esc(n.url)}" class="${pageFile && n.url.indexOf(pageFile) === 0 ? "active" : ""}">${esc(n.label)}</a>`).join("")}
       </nav>`;
   }
 
@@ -539,6 +540,21 @@
       </section>`;
   }
 
+  /* ============ SIMPLE PLACEHOLDER PAGES (freelance, resume) ============ */
+  function renderSimplePage(key) {
+    const root = $("#page");
+    const P = (S.pages && S.pages[key]) || { headline: key, lines: [] };
+    root.innerHTML = `
+      <section class="simple-page">
+        <p class="hero-eyebrow rise" style="--d:.05s">${esc(S.name)}</p>
+        <h1 class="hero-headline rise" style="--d:.15s">${esc(P.headline)}</h1>
+        <div class="simple-body">
+          ${(P.lines || []).map((l, i) => `<p class="reveal" style="--d:${(0.25 + i * 0.1).toFixed(2)}s">${esc(l)}</p>`).join("")}
+          <p class="reveal" style="--d:.5s"><a class="text-link" href="#contact" data-open-contact>Get in touch &rarr;</a></p>
+        </div>
+      </section>`;
+  }
+
   /* ============ VIEWS COUNTER ============ */
   function initViewsCounter() {
     const sec = $("#viewsStat");
@@ -581,6 +597,7 @@
   if (PAGE === "film") renderFilm();
   else if (PAGE === "about") renderAbout();
   else if (PAGE === "project") renderProject();
+  else if (PAGE === "freelance" || PAGE === "resume") renderSimplePage(PAGE);
   else renderHome();
   initViewsCounter();
   pageTransitions();
