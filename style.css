@@ -133,6 +133,12 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   line-height: 1.25; max-width: 22ch;
 }
 .word-reveal .w { opacity: 0.14; transition: opacity 0.35s ease; }
+.statement-by { font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-faint); margin: 0; }
+.statement-sig { height: clamp(38px, 5vw, 58px); width: auto; display: block; margin: 0 auto; }
+
+/* ---------- handwritten note ---------- */
+.about-note { display: flex; justify-content: center; padding: 0 var(--pad) 12vh; }
+.about-note img { display: block; width: min(720px, 92%); height: auto; }
 .word-reveal .w.lit { opacity: 1; }
 
 /* ---------- views counter ---------- */
