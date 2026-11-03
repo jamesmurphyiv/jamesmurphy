@@ -397,6 +397,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .hero-links a { margin-left: 0; }
   .film-intro .scroll-cue { display: none; }
   .viewer-bottom { flex-wrap: wrap; }
+  .viewer-cue { bottom: 126px; }
   .viewer-filters { order: 3; width: 100%; justify-content: flex-start; }
   .viewer-list-wrap { left: 16px; right: 16px; }
   .viewer-list-wrap { height: 34vh; }
@@ -484,4 +485,4 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .project-images-grid { grid-template-columns: 1fr; }
   .project-pn { flex-direction: column; }
   .pn-next { text-align: left; margin-left: 0; }
-             }
+}
