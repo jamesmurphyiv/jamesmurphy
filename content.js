@@ -66,6 +66,9 @@ window.SITE = {
        no spaces (e.g. "my-film"). Never reuse one.
      - type: used for the Film page filter pills.
      - year: shown on cards and the project page.
+     - releaseDate: YouTube public release date (YYYY-MM-DD).
+       Keep the blocks in newest-to-oldest order.
+     - Only released projects belong in this public file.
      - image: still for the cards (null = uses the YouTube
        thumbnail when videoUrl is set, else a placeholder).
      - videoUrl: full YouTube link, including its &t= start
@@ -77,44 +80,14 @@ window.SITE = {
      - credits: rows for the project page credits table.
      - url: optional external link ("View source" on its page). */
   projects: [
-    { slug: "my-best-friend-jay", title: "My Best Friend Jay", type: "Short film", year: "",
-      image: "assets/my-best-friend-jay-card.jpg", videoUrl: "https://www.youtube.com/watch?v=tYo0jO_GrQo&t=29s",
-      images: ["assets/my-best-friend-jay-1.jpg", "assets/my-best-friend-jay-2.jpg", "assets/my-best-friend-jay-3.jpg", "assets/my-best-friend-jay-4.jpg", "assets/my-best-friend-jay-5.jpg", "assets/my-best-friend-jay-6.jpg"],
+    { slug: "sky-guys", title: "Sky Guys", type: "Short film", year: "", releaseDate: "2026-05-27",
+      image: "assets/sky-guys-card.jpg", videoUrl: "https://www.youtube.com/watch?v=Sv-a5apauQI&t=281s",
+      images: ["assets/sky-guys-1.jpg", "assets/sky-guys-2.jpg", "assets/sky-guys-3.jpg", "assets/sky-guys-4.jpg", "assets/sky-guys-5.jpg", "assets/sky-guys-6.jpg"],
       credits: [
-        { role: "Director", name: "Max Miller" },
+        { role: "Director", name: "Julianne Backherms" },
         { role: "Starring Actor", name: "James Murphy" }
       ] },
-    { slug: "forging-iron-dusk", title: "Forging Iron Dusk", type: "Short film", year: "",
-      image: null, videoUrl: "https://www.youtube.com/watch?v=Xra6bpzmBhM&t=67s",
-      images: [null, null, null, null, null, null],
-      credits: [
-        { role: "Director", name: "James Murphy" }
-      ] },
-    { slug: "iron-dusk", title: "Iron Dusk", type: "Short film", year: "",
-      image: "assets/iron-dusk-card.jpg", videoUrl: "https://www.youtube.com/watch?v=jMANytQTdPg&t=57s",
-      images: ["assets/iron-dusk-1.jpg", "assets/iron-dusk-2.jpg", "assets/iron-dusk-3.jpg", "assets/iron-dusk-4.jpg", "assets/iron-dusk-5.jpg", "assets/iron-dusk-6.jpg"],
-      credits: [
-        { role: "Director", name: "Austin Parenti" },
-        { role: "Cinematographer", name: "Phil King" },
-        { role: "Visual Effects", name: "James Murphy" }
-      ] },
-    { slug: "kotor-escape-from-taris", title: "Knights of the Old Republic: Escape from Taris", type: "Short film", year: "",
-      image: "assets/kotor-escape-from-taris-card.jpg", videoUrl: "https://www.youtube.com/watch?v=SWSa8dvaCSM",
-      images: ["assets/kotor-escape-from-taris-1.jpg", "assets/kotor-escape-from-taris-2.jpg", "assets/kotor-escape-from-taris-3.jpg", "assets/kotor-escape-from-taris-4.jpg", "assets/kotor-escape-from-taris-5.jpg", "assets/kotor-escape-from-taris-6.jpg"],
-      credits: [
-        { role: "Director", name: "Austin Parenti" },
-        { role: "Cinematographer", name: "Phil King" },
-        { role: "2nd Unit Camera Operator", name: "James Murphy" }
-      ] },
-    { slug: "the-last-toy-store", title: "The Last Toy Store", type: "Short film", year: "",
-      image: "assets/the-last-toy-store-card.jpg", videoUrl: "https://www.youtube.com/watch?v=why6EtoQpNQ",
-      images: ["assets/the-last-toy-store-1.jpg", "assets/the-last-toy-store-2.jpg", "assets/the-last-toy-store-3.jpg", "assets/the-last-toy-store-4.jpg", "assets/the-last-toy-store-5.jpg", "assets/the-last-toy-store-6.jpg"],
-      credits: [
-        { role: "Director", name: "Rachel Pettway" },
-        { role: "Cinematographer", name: "Max McCabe" },
-        { role: "Scenic Designer", name: "James Murphy" }
-      ] },
-    { slug: "midnight-justice-dawn-of-night-wraith", title: "Midnight Justice: The Dawn of Night Wraith", type: "Short film", year: "",
+    { slug: "midnight-justice-dawn-of-night-wraith", title: "Midnight Justice: The Dawn of Night Wraith", type: "Short film", year: "", releaseDate: "2026-05-26",
       image: "assets/midnight-justice-dawn-of-night-wraith-card.jpg", videoUrl: "https://www.youtube.com/watch?v=9jMnqgMCKT4",
       images: ["assets/midnight-justice-dawn-of-night-wraith-1.jpg", "assets/midnight-justice-dawn-of-night-wraith-2.jpg", "assets/midnight-justice-dawn-of-night-wraith-3.jpg", "assets/midnight-justice-dawn-of-night-wraith-4.jpg", "assets/midnight-justice-dawn-of-night-wraith-5.jpg", "assets/midnight-justice-dawn-of-night-wraith-6.jpg"],
       credits: [
@@ -122,30 +95,7 @@ window.SITE = {
         { role: "Cinematographer", name: "Constantine Morano" },
         { role: "Producer", name: "James Murphy" }
       ] },
-    { slug: "sky-guys", title: "Sky Guys", type: "Short film", year: "",
-      image: "assets/sky-guys-card.jpg", videoUrl: "https://www.youtube.com/watch?v=Sv-a5apauQI&t=281s",
-      images: ["assets/sky-guys-1.jpg", "assets/sky-guys-2.jpg", "assets/sky-guys-3.jpg", "assets/sky-guys-4.jpg", "assets/sky-guys-5.jpg", "assets/sky-guys-6.jpg"],
-      credits: [
-        { role: "Director", name: "Julianne Backherms" },
-        { role: "Starring Actor", name: "James Murphy" }
-      ] },
-    { slug: "the-legend-of-skunk-ape", title: "The Legend of Skunk Ape", type: "Short film", year: "",
-      image: "assets/the-legend-of-skunk-ape-card.jpg", videoUrl: "https://www.youtube.com/watch?v=3Ff5KQgyAmA&t=12s",
-      images: ["assets/the-legend-of-skunk-ape-1.jpg", "assets/the-legend-of-skunk-ape-2.jpg", "assets/the-legend-of-skunk-ape-3.jpg", "assets/the-legend-of-skunk-ape-4.jpg", "assets/the-legend-of-skunk-ape-5.jpg", "assets/the-legend-of-skunk-ape-6.jpg"],
-      credits: [
-        { role: "Director", name: "Constantine Morano" },
-        { role: "Cinematographer", name: "Max Miller" },
-        { role: "Marty", name: "James Murphy" }
-      ] },
-    { slug: "tales-of-mission-and-zaalbar", title: "The Tales of Mission & Zaalbar", type: "Short film", year: "",
-      image: "assets/tales-of-mission-and-zaalbar-card.jpg", videoUrl: "https://www.youtube.com/watch?v=_6kAz1IJx8Q&t=14s",
-      images: ["assets/tales-of-mission-and-zaalbar-1.jpg", "assets/tales-of-mission-and-zaalbar-2.jpg", "assets/tales-of-mission-and-zaalbar-3.jpg", "assets/tales-of-mission-and-zaalbar-4.jpg", "assets/tales-of-mission-and-zaalbar-5.jpg", "assets/tales-of-mission-and-zaalbar-6.jpg"],
-      credits: [
-        { role: "Director", name: "Sophia Kerns & Myla Tumas" },
-        { role: "Cinematographer", name: "Max McCabe" },
-        { role: "Producer & Graphic Artist", name: "James Murphy" }
-      ] },
-    { slug: "above-the-fold", title: "Above the Fold", type: "Short film", year: "",
+    { slug: "above-the-fold", title: "Above the Fold", type: "Short film", year: "", releaseDate: "2026-05-22",
       image: "assets/above-the-fold-card.jpg", videoUrl: "https://www.youtube.com/watch?v=rF0aAd_4Dr8&t=140s",
       images: ["assets/above-the-fold-1.jpg", "assets/above-the-fold-2.jpg", "assets/above-the-fold-3.jpg", "assets/above-the-fold-4.jpg", "assets/above-the-fold-5.jpg", "assets/above-the-fold-6.jpg"],
       credits: [
@@ -153,43 +103,65 @@ window.SITE = {
         { role: "Cinematographer", name: "Dylan Yuan" },
         { role: "Camera Operator", name: "James Murphy" }
       ] },
-    { slug: "future-presence-passed", title: "Future Presence Passed", type: "Short film", year: "",
+    { slug: "future-presence-passed", title: "Future Presence Passed", type: "Short film", year: "", releaseDate: "2026-05-15",
       image: "assets/future-presence-passed-card.jpg", videoUrl: "https://www.youtube.com/watch?v=eVz5IkvKdgk&t=338s",
       images: ["assets/future-presence-passed-1.jpg", "assets/future-presence-passed-2.jpg", "assets/future-presence-passed-3.jpg", "assets/future-presence-passed-4.jpg", "assets/future-presence-passed-5.jpg", "assets/future-presence-passed-6.jpg"],
       credits: [
         { role: "Director", name: "Max Miller" },
         { role: "Producer & Starring Actor", name: "James Murphy" }
       ] },
-    { slug: "kotor-ii-search-for-the-star-forge", title: "Knights of the Old Republic II: Search for the Star Forge", type: "Short film", year: "",
-      image: null, videoUrl: null, unreleased: true,
-      images: [null, null, null, null, null, null],
+    { slug: "the-legend-of-skunk-ape", title: "The Legend of Skunk Ape", type: "Short film", year: "", releaseDate: "2026-05-14",
+      image: "assets/the-legend-of-skunk-ape-card.jpg", videoUrl: "https://www.youtube.com/watch?v=3Ff5KQgyAmA&t=12s",
+      images: ["assets/the-legend-of-skunk-ape-1.jpg", "assets/the-legend-of-skunk-ape-2.jpg", "assets/the-legend-of-skunk-ape-3.jpg", "assets/the-legend-of-skunk-ape-4.jpg", "assets/the-legend-of-skunk-ape-5.jpg", "assets/the-legend-of-skunk-ape-6.jpg"],
+      credits: [
+        { role: "Director", name: "Constantine Morano" },
+        { role: "Cinematographer", name: "Max Miller" },
+        { role: "Marty", name: "James Murphy" }
+      ] },
+    { slug: "tales-of-mission-and-zaalbar", title: "The Tales of Mission & Zaalbar", type: "Short film", year: "", releaseDate: "2026-05-12",
+      image: "assets/tales-of-mission-and-zaalbar-card.jpg", videoUrl: "https://www.youtube.com/watch?v=_6kAz1IJx8Q&t=14s",
+      images: ["assets/tales-of-mission-and-zaalbar-1.jpg", "assets/tales-of-mission-and-zaalbar-2.jpg", "assets/tales-of-mission-and-zaalbar-3.jpg", "assets/tales-of-mission-and-zaalbar-4.jpg", "assets/tales-of-mission-and-zaalbar-5.jpg", "assets/tales-of-mission-and-zaalbar-6.jpg"],
+      credits: [
+        { role: "Director", name: "Sophia Kerns & Myla Tumas" },
+        { role: "Cinematographer", name: "Max McCabe" },
+        { role: "Producer & Graphic Artist", name: "James Murphy" }
+      ] },
+    { slug: "kotor-escape-from-taris", title: "Knights of the Old Republic: Escape from Taris", type: "Short film", year: "", releaseDate: "2026-05-07",
+      image: "assets/kotor-escape-from-taris-card.jpg", videoUrl: "https://www.youtube.com/watch?v=SWSa8dvaCSM",
+      images: ["assets/kotor-escape-from-taris-1.jpg", "assets/kotor-escape-from-taris-2.jpg", "assets/kotor-escape-from-taris-3.jpg", "assets/kotor-escape-from-taris-4.jpg", "assets/kotor-escape-from-taris-5.jpg", "assets/kotor-escape-from-taris-6.jpg"],
       credits: [
         { role: "Director", name: "Austin Parenti" },
         { role: "Cinematographer", name: "Phil King" },
-        { role: "1st Assistant Camera Operator", name: "James Murphy" }
+        { role: "2nd Unit Camera Operator", name: "James Murphy" }
       ] },
-    { slug: "ai-in-use", title: "AI in Use", type: "Short film", year: "",
-      image: null, videoUrl: null, unreleased: true,
-      images: [null, null, null, null, null, null],
+    { slug: "the-last-toy-store", title: "The Last Toy Store", type: "Short film", year: "", releaseDate: "2025-12-17",
+      image: "assets/the-last-toy-store-card.jpg", videoUrl: "https://www.youtube.com/watch?v=why6EtoQpNQ",
+      images: ["assets/the-last-toy-store-1.jpg", "assets/the-last-toy-store-2.jpg", "assets/the-last-toy-store-3.jpg", "assets/the-last-toy-store-4.jpg", "assets/the-last-toy-store-5.jpg", "assets/the-last-toy-store-6.jpg"],
+      credits: [
+        { role: "Director", name: "Rachel Pettway" },
+        { role: "Cinematographer", name: "Max McCabe" },
+        { role: "Scenic Designer", name: "James Murphy" }
+      ] },
+    { slug: "my-best-friend-jay", title: "My Best Friend Jay", type: "Short film", year: "", releaseDate: "2025-07-07",
+      image: "assets/my-best-friend-jay-card.jpg", videoUrl: "https://www.youtube.com/watch?v=tYo0jO_GrQo&t=29s",
+      images: ["assets/my-best-friend-jay-1.jpg", "assets/my-best-friend-jay-2.jpg", "assets/my-best-friend-jay-3.jpg", "assets/my-best-friend-jay-4.jpg", "assets/my-best-friend-jay-5.jpg", "assets/my-best-friend-jay-6.jpg"],
       credits: [
         { role: "Director", name: "Max Miller" },
-        { role: "Cinematographer & Producer", name: "James Murphy" }
+        { role: "Starring Actor", name: "James Murphy" }
       ] },
-    { slug: "along-the-lines-of-love", title: "Along the Lines of Love", type: "Short film", year: "",
-      image: null, videoUrl: null, unreleased: true,
+    { slug: "iron-dusk", title: "Iron Dusk", type: "Short film", year: "", releaseDate: "2024-12-13",
+      image: "assets/iron-dusk-card.jpg", videoUrl: "https://www.youtube.com/watch?v=jMANytQTdPg&t=57s",
+      images: ["assets/iron-dusk-1.jpg", "assets/iron-dusk-2.jpg", "assets/iron-dusk-3.jpg", "assets/iron-dusk-4.jpg", "assets/iron-dusk-5.jpg", "assets/iron-dusk-6.jpg"],
+      credits: [
+        { role: "Director", name: "Austin Parenti" },
+        { role: "Cinematographer", name: "Phil King" },
+        { role: "Visual Effects", name: "James Murphy" }
+      ] },
+    { slug: "forging-iron-dusk", title: "Forging Iron Dusk", type: "Short film", year: "", releaseDate: "2024-06-16",
+      image: null, videoUrl: "https://www.youtube.com/watch?v=Xra6bpzmBhM&t=67s",
       images: [null, null, null, null, null, null],
       credits: [
-        { role: "Director", name: "Myla Tumas" },
-        { role: "Cinematographer", name: "Austin Parenti" },
-        { role: "Assistant Director & Producer", name: "James Murphy" }
-      ] },
-    { slug: "camp-rock-bottom", title: "Camp Rock Bottom", type: "Short film", year: "",
-      image: null, videoUrl: null, unreleased: true,
-      images: [null, null, null, null, null, null],
-      credits: [
-        { role: "Director", name: "Rose Warren" },
-        { role: "Cinematographer", name: "Elliana Nabhan" },
-        { role: "Assistant Director & Producer", name: "James Murphy" }
+        { role: "Director", name: "James Murphy" }
       ] }
   ],
 
