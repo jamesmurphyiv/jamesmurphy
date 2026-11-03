@@ -358,8 +358,11 @@
       S.projects.forEach((p) => { if (p.type && t.indexOf(p.type) < 0) t.push(p.type); });
       return t;
     }
+    const filmOrder = S.projects.slice().sort((a, b) => (b.year || "0").localeCompare(a.year || "0"));
+    const fppIdx = filmOrder.findIndex((p) => p.slug === "future-presence-passed");
+    if (fppIdx > 0) filmOrder.unshift(filmOrder.splice(fppIdx, 1)[0]);
     function filtered() {
-      return S.projects.filter((p) => state.filter === "All" || p.type === state.filter);
+      return filmOrder.filter((p) => state.filter === "All" || p.type === state.filter);
     }
     function pad(n) { return String(n).padStart(2, "0"); }
 
@@ -381,7 +384,7 @@
       $("#viewerBgs").innerHTML = state.projects.map((p, i) =>
         `<div class="viewer-bg" data-i="${i}"><a class="viewer-bg-link" href="${projectUrl(p)}" aria-label="Open ${esc(p.title)}">${mediaHTML(p, "viewer-bg-media", p.title)}<div class="viewer-bg-shade"></div></a></div>`).join("");
       $("#viewerList").innerHTML = state.projects.map((p, i) =>
-        `<li data-i="${i}"><button aria-label="Select ${esc(p.title)}"><strong>${esc(p.title)}</strong><span>${esc(p.type || "Film")}</span></button></li>`).join("");
+        `<li data-i="${i}"><button aria-label="Select ${esc(p.title)}"><strong>${esc(p.title)}</strong></button></li>`).join("");
       $$("#viewerList li button").forEach((b, i) => b.addEventListener("click", () => jump(i)));
       buildFilters();
       buildOverview();
@@ -408,7 +411,7 @@
         const wrapH = $(".viewer-list-wrap").offsetHeight;
         const rowCenter = row ? row.offsetTop + row.offsetHeight / 2 : 0;
         list.style.transform = "translateY(" + (wrapH / 2 - rowCenter) + "px)";
-        $("#viewerCredits").innerHTML = (proj.credits || []).slice(0, 4).map((c) =>
+        $("#viewerCredits").innerHTML = (proj.credits || []).filter((c) => c.role === "Director").slice(0, 1).map((c) =>
           `<div class="credit-row"><span>${esc(c.role)}</span><strong>${esc(c.name)}</strong></div>`).join("") +
           `<a class="viewer-open text-link" href="${projectUrl(proj)}">View project &rarr;</a>`;
         $("#viewerYear").textContent = proj.year || (proj.unreleased ? "Unreleased" : "");
