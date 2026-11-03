@@ -560,7 +560,9 @@
       </section>
       <section class="statement">
         <p class="statement-text word-reveal">${esc(A.statement)}</p>
+        ${A.statementSig ? `<img class="statement-sig reveal" style="--d:.2s" src="${esc(A.statementSig)}" alt="Walt Disney signature">` : (A.statementBy ? `<p class="statement-by reveal" style="--d:.2s">- ${esc(A.statementBy)}</p>` : "")}
       </section>
+      ${A.note ? `<section class="about-note reveal" style="--d:.1s"><img src="${esc(A.note)}" alt="Handwritten note from James: Hey, my name is Jimmy, or whatever you wanna call me. Ever since I was ten I have been obsessed with one thing: making movies, and now I have that opportunity. But as much as I like making my own projects, I love other people doing what I love most - filmmaking. So if you have any questions or want to work together, reach out!" loading="lazy"></section>` : ""}
       <section class="about-body">
         ${A.body.map((p, i) => `<p class="reveal" style="--d:${i * 0.1}s">${esc(p)}</p>`).join("")}
         <dl class="about-facts reveal" style="--d:.2s">
