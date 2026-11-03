@@ -310,6 +310,10 @@
             </a>`).join("")}
         </div>
       </section>`;
+    if (window.SITE_IMAGES && window.SITE_IMAGES.watermark && window.matchMedia("(max-width: 560px)").matches) {
+      const wm = root.querySelector(".hero-wm");
+      if (wm) wm.style.backgroundImage = `url("${window.SITE_IMAGES.watermark}")`;
+    }
   }
 
   /* ============ FILM PAGE ============ */
