@@ -24,6 +24,7 @@ window.SITE = {
      "Contact" opens the popup automatically. Keep its url as
      "#contact" - do not point it at a page. */
   nav: [
+    { label: "Home",    url: "index.html" },
     { label: "Film",    url: "film.html"  },
     { label: "About",   url: "about.html" },
     { label: "Contact", url: "#contact"   }
@@ -41,15 +42,15 @@ window.SITE = {
     scrollHint: "Scroll"
   },
 
-  /* ---------- HOME: BRAND STRIP (logos scrolling under the hero) ----------
-     Replace these with client names, festivals, whatever applies. */
+  /* ---------- HOME: STATS STRIP (scrolling under the hero) ---------- */
   brandStrip: [
-    "FESTIVAL ONE", "CLIENT NAME", "SHORT FILM '26", "MUSIC VIDEO",
-    "FESTIVAL TWO", "PRODUCTION CO", "DOCUMENTARY", "COMMERCIAL"
+    "20 CREDITS AT 16", "1.1M+ TOTAL VIEWS", "~1.7M HOURS WATCHED (EST.)",
+    "2 FEATURE FILMS", "8 SHORT FILMS", "1 DOCUMENTARY",
+    "11 PROJECTS", "FOUNDING APPERT FILMS"
   ],
 
   /* ---------- HOME: STATEMENT (lights up word by word as you scroll) ---------- */
-  statement: "I shoot with what I have, but above all with what I feel. Directing, lighting and color are just how I pass that feeling on to you.",
+  statement: "Twenty credits at sixteen. Director, producer, DP, actor - whatever the film needs, that's me. Now I'm building Appert Films into a real studio.",
 
   /* ---------- HOME: FEATURED PROJECTS (grid under the statement) ---------- */
   featuredTitle: "Projects",
@@ -190,6 +191,22 @@ window.SITE = {
     linkLabel: "Get in touch"   // opens the contact popup
   },
 
+  /* ---------- SIMPLE PAGES (freelance + resume) ----------
+     Placeholders for now - the real freelance page and the
+     resume PDF go here later. */
+  pages: {
+    freelance: {
+      title: "Freelance",
+      headline: "Freelance.",
+      lines: ["Available for select projects. The full page is coming soon."]
+    },
+    resume: {
+      title: "Resume",
+      headline: "Resume.",
+      lines: ["The resume PDF drops right here, soon."]
+    }
+  },
+
   /* ---------- CONTACT POPUP ---------- */
   contact: {
     heading: "Contact",
@@ -213,6 +230,8 @@ window.SITE = {
     timezone: "America/New_York",     // for the clock
     copyright: "James Murphy",
     socials: [
+      { label: "Freelance", url: "freelance.html" },
+      { label: "Resume",    url: "resume.html"    },
       { label: "Instagram", url: "#" },   // paste your Instagram URL between the quotes
       { label: "YouTube",   url: "#" },   // paste your YouTube URL between the quotes
       { label: "Email",     url: "mailto:jwizard.industries@gmail.com" }
