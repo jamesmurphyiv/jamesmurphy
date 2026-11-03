@@ -216,6 +216,10 @@ window.SITE = {
     photo: null,                // e.g. "assets/me.jpg" - small round photo in the popup
     name: "James Murphy",
     email: "jmurphy@appertfilms.com",
+    socials: [
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/james-murphy-iv-4b8ab1300/" }
+      // { label: "IMDb", url: "#" }   // add when the IMDb page is ready
+    ],
     buttonLabel: "Send message",
     placeholders: {
       name: "Your name",
@@ -236,6 +240,8 @@ window.SITE = {
       { label: "Resume",    url: "resume.html"    },
       { label: "Instagram", url: "#" },   // paste your Instagram URL between the quotes
       { label: "YouTube",   url: "#" },   // paste your YouTube URL between the quotes
+      { label: "LinkedIn",  url: "https://www.linkedin.com/in/james-murphy-iv-4b8ab1300/" },
+      // { label: "IMDb",    url: "#" },   // IMDb page coming - paste the URL here when ready
       { label: "Email",     url: "mailto:jmurphy@appertfilms.com" }
     ]
   }
