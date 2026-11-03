@@ -52,7 +52,7 @@
     const h = $("#siteHeader");
     if (!h) return;
     h.innerHTML = `
-      <a class="monogram" href="index.html">${esc(S.monogram || S.name)}</a>
+      <a class="monogram" href="index.html" aria-label="${esc(S.name)}"><img src="assets/crest.png" alt="${esc(S.name)}"></a>
       <nav class="main-nav">
         ${S.nav.map((n) => n.url === "#contact"
           ? `<a href="#contact" data-open-contact>${esc(n.label)}</a>`
