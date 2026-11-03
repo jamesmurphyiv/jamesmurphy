@@ -81,15 +81,15 @@ window.SITE = {
      - credits: rows for the project page credits table.
      - url: optional external link ("View source" on its page). */
   projects: [
-    { slug: "the-legend-of-skunk-ape", title: "The Legend of Skunk Ape", type: "Short film", year: "", releaseDate: "2026-05-14",
+    { slug: "the-legend-of-skunk-ape", title: "The Legend of Skunk Ape", type: "Short film", year: "2026", releaseDate: "2026-05-14",
       image: "assets/the-legend-of-skunk-ape-card.jpg", videoUrl: "https://www.youtube.com/watch?v=3Ff5KQgyAmA&t=12s",
       images: ["assets/the-legend-of-skunk-ape-1.jpg", "assets/the-legend-of-skunk-ape-2.jpg", "assets/the-legend-of-skunk-ape-3.jpg", "assets/the-legend-of-skunk-ape-4.jpg", "assets/the-legend-of-skunk-ape-5.jpg", "assets/the-legend-of-skunk-ape-6.jpg"],
       credits: [
         { role: "Director", name: "Constantine Morano" },
         { role: "Cinematographer", name: "Max Miller" },
-        { role: "Marty", name: "James Murphy" }
+        { role: "Lead Actor", name: "James Murphy" }
       ] },
-    { slug: "midnight-justice-dawn-of-night-wraith", title: "Midnight Justice: The Dawn of Night Wraith", type: "Short film", year: "", releaseDate: "2026-05-26",
+    { slug: "midnight-justice-dawn-of-night-wraith", title: "Midnight Justice: The Dawn of Night Wraith", type: "Short film", year: "2025", releaseDate: "2026-05-26",
       image: "assets/midnight-justice-dawn-of-night-wraith-card.jpg", videoUrl: "https://www.youtube.com/watch?v=9jMnqgMCKT4",
       images: ["assets/midnight-justice-dawn-of-night-wraith-1.jpg", "assets/midnight-justice-dawn-of-night-wraith-2.jpg", "assets/midnight-justice-dawn-of-night-wraith-3.jpg", "assets/midnight-justice-dawn-of-night-wraith-4.jpg", "assets/midnight-justice-dawn-of-night-wraith-5.jpg", "assets/midnight-justice-dawn-of-night-wraith-6.jpg"],
       credits: [
@@ -97,13 +97,13 @@ window.SITE = {
         { role: "Cinematographer", name: "Constantine Morano" },
         { role: "Producer", name: "James Murphy" }
       ] },
-    { slug: "above-the-fold", title: "Above the Fold", type: "Short film", year: "", releaseDate: "2026-05-22",
+    { slug: "above-the-fold", title: "Above the Fold", type: "Short film", year: "2026", releaseDate: "2026-05-22",
       image: "assets/above-the-fold-card.jpg", videoUrl: "https://www.youtube.com/watch?v=rF0aAd_4Dr8&t=140s",
       images: ["assets/above-the-fold-1.jpg", "assets/above-the-fold-2.jpg", "assets/above-the-fold-3.jpg", "assets/above-the-fold-4.jpg", "assets/above-the-fold-5.jpg", "assets/above-the-fold-6.jpg"],
       credits: [
         { role: "Director", name: "Rose Warren" },
         { role: "Cinematographer", name: "Dylan Yuan" },
-        { role: "Camera Operator", name: "James Murphy" }
+        { role: "Assistant Camera Operator / Camera Operator", name: "James Murphy" }
       ] },
     { slug: "future-presence-passed", title: "Future Presence Passed", type: "Short film", year: "", releaseDate: "2026-05-15",
       image: "assets/future-presence-passed-card.jpg", videoUrl: "https://www.youtube.com/watch?v=eVz5IkvKdgk&t=338s",
@@ -112,22 +112,22 @@ window.SITE = {
         { role: "Director", name: "Max Miller" },
         { role: "Producer & Starring Actor", name: "James Murphy" }
       ] },
-    { slug: "sky-guys", title: "Sky Guys", type: "Short film", year: "", releaseDate: "2026-05-27",
+    { slug: "sky-guys", title: "Sky Guys", type: "Short film", year: "2025", releaseDate: "2026-05-27",
       image: "assets/sky-guys-card.jpg", videoUrl: "https://www.youtube.com/watch?v=Sv-a5apauQI&t=281s",
       images: ["assets/sky-guys-1.jpg", "assets/sky-guys-2.jpg", "assets/sky-guys-3.jpg", "assets/sky-guys-4.jpg", "assets/sky-guys-5.jpg", "assets/sky-guys-6.jpg"],
       credits: [
         { role: "Director", name: "Julianne Backherms" },
-        { role: "Starring Actor", name: "James Murphy" }
+        { role: "Lead Actor", name: "James Murphy" }
       ] },
-    { slug: "tales-of-mission-and-zaalbar", title: "The Tales of Mission & Zaalbar", type: "Short film", year: "", releaseDate: "2026-05-12",
+    { slug: "tales-of-mission-and-zaalbar", title: "The Tales of Mission & Zaalbar", type: "Short film", year: "2026", releaseDate: "2026-05-12",
       image: "assets/tales-of-mission-and-zaalbar-card.jpg", videoUrl: "https://www.youtube.com/watch?v=_6kAz1IJx8Q&t=14s",
       images: ["assets/tales-of-mission-and-zaalbar-1.jpg", "assets/tales-of-mission-and-zaalbar-2.jpg", "assets/tales-of-mission-and-zaalbar-3.jpg", "assets/tales-of-mission-and-zaalbar-4.jpg", "assets/tales-of-mission-and-zaalbar-5.jpg", "assets/tales-of-mission-and-zaalbar-6.jpg"],
       credits: [
         { role: "Director", name: "Sophia Kerns & Myla Tumas" },
         { role: "Cinematographer", name: "Max McCabe" },
-        { role: "Producer & Graphic Artist", name: "James Murphy" }
+        { role: "Producer", name: "James Murphy" }
       ] },
-    { slug: "kotor-escape-from-taris", title: "Knights of the Old Republic: Escape from Taris", type: "Feature", year: "", releaseDate: "2026-05-07",
+    { slug: "kotor-escape-from-taris", title: "Knights of the Old Republic: Escape from Taris", type: "Feature", year: "2025", releaseDate: "2026-05-07",
       image: "assets/kotor-escape-from-taris-card.jpg", videoUrl: "https://www.youtube.com/watch?v=SWSa8dvaCSM",
       images: ["assets/kotor-escape-from-taris-1.jpg", "assets/kotor-escape-from-taris-2.jpg", "assets/kotor-escape-from-taris-3.jpg", "assets/kotor-escape-from-taris-4.jpg", "assets/kotor-escape-from-taris-5.jpg", "assets/kotor-escape-from-taris-6.jpg"],
       credits: [
@@ -135,30 +135,30 @@ window.SITE = {
         { role: "Cinematographer", name: "Phil King" },
         { role: "2nd Unit Camera Operator", name: "James Murphy" }
       ] },
-    { slug: "the-last-toy-store", title: "The Last Toy Store", type: "Short film", year: "", releaseDate: "2025-12-17",
+    { slug: "the-last-toy-store", title: "The Last Toy Store", type: "Short film", year: "2025", releaseDate: "2025-12-17",
       image: "assets/the-last-toy-store-card.jpg", videoUrl: "https://www.youtube.com/watch?v=why6EtoQpNQ",
       images: ["assets/the-last-toy-store-1.jpg", "assets/the-last-toy-store-2.jpg", "assets/the-last-toy-store-3.jpg", "assets/the-last-toy-store-4.jpg", "assets/the-last-toy-store-5.jpg", "assets/the-last-toy-store-6.jpg"],
       credits: [
         { role: "Director", name: "Rachel Pettway" },
         { role: "Cinematographer", name: "Max McCabe" },
-        { role: "Scenic Designer", name: "James Murphy" }
+        { role: "Set Designer", name: "James Murphy" }
       ] },
-    { slug: "my-best-friend-jay", title: "My Best Friend Jay", type: "Short film", year: "", releaseDate: "2025-07-07",
+    { slug: "my-best-friend-jay", title: "My Best Friend Jay", type: "Short film", year: "2024", releaseDate: "2025-07-07",
       image: "assets/my-best-friend-jay-card.jpg", videoUrl: "https://www.youtube.com/watch?v=tYo0jO_GrQo&t=29s",
       images: ["assets/my-best-friend-jay-1.jpg", "assets/my-best-friend-jay-2.jpg", "assets/my-best-friend-jay-3.jpg", "assets/my-best-friend-jay-4.jpg", "assets/my-best-friend-jay-5.jpg", "assets/my-best-friend-jay-6.jpg"],
       credits: [
         { role: "Director", name: "Max Miller" },
-        { role: "Starring Actor", name: "James Murphy" }
+        { role: "Lead Actor", name: "James Murphy" }
       ] },
-    { slug: "iron-dusk", title: "Iron Dusk", type: "Feature", year: "", releaseDate: "2024-12-13",
+    { slug: "iron-dusk", title: "Iron Dusk", type: "Feature", year: "2024", releaseDate: "2024-12-13",
       image: "assets/iron-dusk-card.jpg", videoUrl: "https://www.youtube.com/watch?v=jMANytQTdPg&t=57s",
       images: ["assets/iron-dusk-1.jpg", "assets/iron-dusk-2.jpg", "assets/iron-dusk-3.jpg", "assets/iron-dusk-4.jpg", "assets/iron-dusk-5.jpg", "assets/iron-dusk-6.jpg"],
       credits: [
         { role: "Director", name: "Austin Parenti" },
         { role: "Cinematographer", name: "Phil King" },
-        { role: "Visual Effects", name: "James Murphy" }
+        { role: "Visual Effects Supervisor", name: "James Murphy" }
       ] },
-    { slug: "forging-iron-dusk", title: "Forging Iron Dusk", type: "Documentary", year: "", releaseDate: "2024-06-16",
+    { slug: "forging-iron-dusk", title: "Forging Iron Dusk", type: "Documentary", year: "2024", releaseDate: "2024-06-16",
       image: null, videoUrl: "https://www.youtube.com/watch?v=Xra6bpzmBhM&t=67s",
       images: [null, null, null, null, null, null],
       credits: [
@@ -186,7 +186,7 @@ window.SITE = {
       { label: "Based in",  value: "New Jersey & Palm Beach" },
       { label: "Focus",     value: "Narrative fiction, documentary" },
       { label: "Studio",    value: "Appert Films" },
-      { label: "Contact",   value: "jwizard.industries@gmail.com" }
+      { label: "Contact",   value: "jmurphy@appertfilms.com" }
     ],
     linkLabel: "Get in touch"   // opens the contact popup
   },
@@ -213,7 +213,7 @@ window.SITE = {
     subline: "Let's work together.",
     photo: null,                // e.g. "assets/me.jpg" - small round photo in the popup
     name: "James Murphy",
-    email: "jwizard.industries@gmail.com",
+    email: "jmurphy@appertfilms.com",
     buttonLabel: "Send message",
     placeholders: {
       name: "Your name",
@@ -234,7 +234,7 @@ window.SITE = {
       { label: "Resume",    url: "resume.html"    },
       { label: "Instagram", url: "#" },   // paste your Instagram URL between the quotes
       { label: "YouTube",   url: "#" },   // paste your YouTube URL between the quotes
-      { label: "Email",     url: "mailto:jwizard.industries@gmail.com" }
+      { label: "Email",     url: "mailto:jmurphy@appertfilms.com" }
     ]
   }
 };
