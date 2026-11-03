@@ -79,6 +79,11 @@
       wm.style.fontSize = "100px";
       const w = wm.scrollWidth || 1;
       wm.style.fontSize = Math.floor((99 * window.innerWidth) / w) + "px";
+      const r = wm.getBoundingClientRect();
+      if (r.width > 0) {
+        const cur = parseFloat(wm.style.fontSize);
+        wm.style.fontSize = Math.floor((cur * 0.998 * window.innerWidth) / r.width) + "px";
+      }
     }
     fitWordmark();
     window.addEventListener("resize", fitWordmark);
