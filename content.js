@@ -176,8 +176,10 @@ window.SITE = {
   /* ---------- ABOUT PAGE ---------- */
   about: {
     portrait: null,             // e.g. "assets/portrait.jpg"
+    note: "assets/note.webp",   // handwritten note (white ink, transparent bg)
     headline: "Filmmaker.",
-    statement: "I shoot with what I have, but above all with what I feel.",
+    statement: "It's kind of fun to do the impossible.",
+    statementSig: "assets/disney-sig.webp",   // Walt Disney signature under the quote
     body: [
       "James Murphy is a filmmaker. He is building a body of work across narrative fiction and documentary - and documenting the whole thing along the way.",
       "He is the founder of Appert Films, a production and distribution house built from scratch, and he shoots with whatever is in his hands."
