@@ -80,12 +80,13 @@ window.SITE = {
      - credits: rows for the project page credits table.
      - url: optional external link ("View source" on its page). */
   projects: [
-    { slug: "sky-guys", title: "Sky Guys", type: "Short film", year: "", releaseDate: "2026-05-27",
-      image: "assets/sky-guys-card.jpg", videoUrl: "https://www.youtube.com/watch?v=Sv-a5apauQI&t=281s",
-      images: ["assets/sky-guys-1.jpg", "assets/sky-guys-2.jpg", "assets/sky-guys-3.jpg", "assets/sky-guys-4.jpg", "assets/sky-guys-5.jpg", "assets/sky-guys-6.jpg"],
+    { slug: "the-legend-of-skunk-ape", title: "The Legend of Skunk Ape", type: "Short film", year: "", releaseDate: "2026-05-14",
+      image: "assets/the-legend-of-skunk-ape-card.jpg", videoUrl: "https://www.youtube.com/watch?v=3Ff5KQgyAmA&t=12s",
+      images: ["assets/the-legend-of-skunk-ape-1.jpg", "assets/the-legend-of-skunk-ape-2.jpg", "assets/the-legend-of-skunk-ape-3.jpg", "assets/the-legend-of-skunk-ape-4.jpg", "assets/the-legend-of-skunk-ape-5.jpg", "assets/the-legend-of-skunk-ape-6.jpg"],
       credits: [
-        { role: "Director", name: "Julianne Backherms" },
-        { role: "Starring Actor", name: "James Murphy" }
+        { role: "Director", name: "Constantine Morano" },
+        { role: "Cinematographer", name: "Max Miller" },
+        { role: "Marty", name: "James Murphy" }
       ] },
     { slug: "midnight-justice-dawn-of-night-wraith", title: "Midnight Justice: The Dawn of Night Wraith", type: "Short film", year: "", releaseDate: "2026-05-26",
       image: "assets/midnight-justice-dawn-of-night-wraith-card.jpg", videoUrl: "https://www.youtube.com/watch?v=9jMnqgMCKT4",
@@ -110,13 +111,12 @@ window.SITE = {
         { role: "Director", name: "Max Miller" },
         { role: "Producer & Starring Actor", name: "James Murphy" }
       ] },
-    { slug: "the-legend-of-skunk-ape", title: "The Legend of Skunk Ape", type: "Short film", year: "", releaseDate: "2026-05-14",
-      image: "assets/the-legend-of-skunk-ape-card.jpg", videoUrl: "https://www.youtube.com/watch?v=3Ff5KQgyAmA&t=12s",
-      images: ["assets/the-legend-of-skunk-ape-1.jpg", "assets/the-legend-of-skunk-ape-2.jpg", "assets/the-legend-of-skunk-ape-3.jpg", "assets/the-legend-of-skunk-ape-4.jpg", "assets/the-legend-of-skunk-ape-5.jpg", "assets/the-legend-of-skunk-ape-6.jpg"],
+    { slug: "sky-guys", title: "Sky Guys", type: "Short film", year: "", releaseDate: "2026-05-27",
+      image: "assets/sky-guys-card.jpg", videoUrl: "https://www.youtube.com/watch?v=Sv-a5apauQI&t=281s",
+      images: ["assets/sky-guys-1.jpg", "assets/sky-guys-2.jpg", "assets/sky-guys-3.jpg", "assets/sky-guys-4.jpg", "assets/sky-guys-5.jpg", "assets/sky-guys-6.jpg"],
       credits: [
-        { role: "Director", name: "Constantine Morano" },
-        { role: "Cinematographer", name: "Max Miller" },
-        { role: "Marty", name: "James Murphy" }
+        { role: "Director", name: "Julianne Backherms" },
+        { role: "Starring Actor", name: "James Murphy" }
       ] },
     { slug: "tales-of-mission-and-zaalbar", title: "The Tales of Mission & Zaalbar", type: "Short film", year: "", releaseDate: "2026-05-12",
       image: "assets/tales-of-mission-and-zaalbar-card.jpg", videoUrl: "https://www.youtube.com/watch?v=_6kAz1IJx8Q&t=14s",
