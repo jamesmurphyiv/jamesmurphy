@@ -77,7 +77,7 @@
         <span>© ${new Date().getFullYear()} ${esc(S.footer.copyright)} · All rights reserved</span>
         <span id="footerClock"></span>
         <span class="footer-socials">
-          ${S.footer.socials.map((s) => `<a href="${esc(s.url)}">${esc(s.label)}</a>`).join("")}
+          ${S.footer.socials.map((s) => `<a href="${esc(s.url)}"${/^https?:/.test(s.url) ? ' target="_blank" rel="noopener"' : ""}>${esc(s.label)}</a>`).join("")}
         </span>
       </div>`;
     const wm = $(".footer-wordmark");
@@ -126,6 +126,7 @@
         <div class="modal-person">${photo}
           <div><strong>${esc(c.name)}</strong><span>${esc(c.email)}</span></div>
         </div>
+        ${(c.socials && c.socials.length) ? `<p class="modal-socials">${c.socials.map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join("")}</p>` : ""}
         <hr class="modal-rule">
         <form id="contactForm" novalidate>
           <label>Name<input type="text" name="name" placeholder="${esc(c.placeholders.name)}" required></label>
