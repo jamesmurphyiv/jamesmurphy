@@ -426,7 +426,8 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .hero-bottom { flex-direction: column; align-items: flex-start; bottom: 110px; }
   /* Center the foreground crest between the nav and the intro on phones. */
   .hero-crest { top: 38svh; height: clamp(180px, 34svh, 320px); }
-  .hero-wm { background-size: auto 100%; }
+  /* Zoom the crest watermark so it crops/fills like the desktop hero. */
+  .hero-wm { background-size: auto 170%; }
   .hero-links { flex-direction: row; gap: 20px; text-align: left; }
   .hero-links a { margin-left: 0; }
   .film-intro .scroll-cue { display: none; }
@@ -438,8 +439,8 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .fact-row { grid-template-columns: 1fr; gap: 4px; }
   .footer-row { justify-content: center; text-align: center; }
   /* About page: flow sections naturally on phones instead of tall vh gaps. */
-  body[data-page="about"] .about-hero { min-height: 0; gap: 32px; padding: calc(96px + env(safe-area-inset-top, 0px)) var(--pad) 8vh; }
-  body[data-page="about"] .statement { min-height: 0; gap: 32px; padding: 10vh var(--pad); }
+  body[data-page="about"] .about-hero { min-height: 0; gap: 32px; padding: calc(96px + env(safe-area-inset-top, 0px)) var(--pad) 4vh; }
+  body[data-page="about"] .statement { min-height: 0; gap: 24px; padding: 6vh var(--pad); }
 }
 
 /* ============================================================
@@ -601,4 +602,4 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 }
 @media (max-width: 560px) {
   .viewer-list-wrap { left: 16px; right: 16px; height: 34vh; }
-               }
+}
