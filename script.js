@@ -73,6 +73,15 @@
           ${S.footer.socials.map((s) => `<a href="${esc(s.url)}">${esc(s.label)}</a>`).join("")}
         </span>
       </div>`;
+    const wm = $(".footer-wordmark");
+    function fitWordmark() {
+      if (!wm) return;
+      wm.style.fontSize = "100px";
+      const w = wm.scrollWidth || 1;
+      wm.style.fontSize = Math.floor((99 * window.innerWidth) / w) + "px";
+    }
+    fitWordmark();
+    window.addEventListener("resize", fitWordmark);
     const clock = $("#footerClock");
     function tick() {
       let t;
