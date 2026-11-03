@@ -3,73 +3,227 @@
    ============================================================
    THIS IS THE ONLY FILE YOU NEED TO EDIT.
 
-   - All text on the site lives here.
+   The site has three pages (Home, Film, About), a Contact
+   popup, and one page per project (generated automatically).
+
    - To swap a photo: drop your image into the /assets folder
-     and put its file name in the "image" field, e.g.
+     and put its file name in an "image" field, e.g.
      image: "assets/mystill.jpg"
    - Leave image as null to keep the dark placeholder.
-   - Save the file, and if the site is connected to GitHub,
-     your change goes live automatically. Otherwise re-upload
-     to Cloudflare (see README.md).
+   - Save the file and commit - the site updates itself in
+     about a minute.
    ============================================================ */
 
 window.SITE = {
 
   /* ---------- YOUR NAME ---------- */
   name: "James Murphy",
-
-  /* ---------- TOP NAV ---------- */
   monogram: "JM",               // tiny logo, top-left
+
+  /* ---------- TOP NAV ----------
+     "Contact" opens the popup automatically. Keep its url as
+     "#contact" - do not point it at a page. */
   nav: [
-    { label: "Films",   url: "#films"   },
-    { label: "About",   url: "#about"   },
-    { label: "Contact", url: "#contact" }
+    { label: "Film",    url: "film.html"  },
+    { label: "About",   url: "about.html" },
+    { label: "Contact", url: "#contact"   }
   ],
 
-  /* ---------- HERO (full-screen opening) ---------- */
+  /* ---------- HOME: HERO (full-screen opening) ---------- */
   hero: {
     image: null,                // e.g. "assets/hero.jpg" - full-screen background
     video: null,                // e.g. "assets/hero.mp4" - plays instead of the image
     eyebrow: "James Murphy",    // small bold line
     headline: "Film director.", // the big line
     tagline: "I shoot music videos, fiction and commercials.",
-    linkLeft:  { label: "Watch the films", url: "#films"   },
-    linkRight: { label: "Get in touch",    url: "#contact" },
+    linkLeft:  { label: "Watch the films", url: "film.html" },
+    linkRight: { label: "Get in touch",    url: "#contact" },   // opens the popup
     scrollHint: "Scroll"
   },
 
-  /* ---------- BRAND STRIP (small logos scrolling under the hero) ----------
+  /* ---------- HOME: BRAND STRIP (logos scrolling under the hero) ----------
      Replace these with client names, festivals, whatever applies. */
   brandStrip: [
     "FESTIVAL ONE", "CLIENT NAME", "SHORT FILM '26", "MUSIC VIDEO",
     "FESTIVAL TWO", "PRODUCTION CO", "DOCUMENTARY", "COMMERCIAL"
   ],
 
-  /* ---------- FILMS GRID ---------- */
-  filmsSectionTitle: "Films",
-  films: [
-    { title: "FILM TITLE 01", category: "Short film",  year: "2026", image: null, url: null },
-    { title: "FILM TITLE 02", category: "Music video", year: "2026", image: null, url: null },
-    { title: "FILM TITLE 03", category: "Commercial",  year: "2025", image: null, url: null },
-    { title: "FILM TITLE 04", category: "Documentary", year: "2025", image: null, url: null },
-    { title: "FILM TITLE 05", category: "Short film",  year: "2024", image: null, url: null },
-    { title: "FILM TITLE 06", category: "Music video", year: "2024", image: null, url: null }
+  /* ---------- HOME: STATEMENT (lights up word by word as you scroll) ---------- */
+  statement: "I shoot with what I have, but above all with what I feel. Directing, lighting and color are just how I pass that feeling on to you.",
+
+  /* ---------- HOME: FEATURED PROJECTS (grid under the statement) ---------- */
+  featuredTitle: "Projects",
+  featuredCount: 4,             // how many projects show on the home page
+  featuredLinkLabel: "All projects",
+
+  /* ---------- PROJECTS ----------
+     These show on the home grid, the Film page, and each one
+     gets its own project page automatically.
+
+     ADDING A PROJECT = copying one of these blocks and changing
+     it. Nothing else to do.
+     - slug: the short id for its page link. Lowercase, dashes,
+       no spaces (e.g. "my-film"). Never reuse one.
+     - type: used for the Film page filter pills.
+     - year: shown on cards and the project page.
+     - image: still for the cards (null = uses the YouTube
+       thumbnail when videoUrl is set, else a placeholder).
+     - videoUrl: full YouTube link, including its &t= start
+       time. Used for the card thumbnail and the project page
+       player. Leave null and set unreleased: true if the film
+       is not out yet.
+     - images: stills for the project page grid (leave null for
+       now - James will fill these later).
+     - credits: rows for the project page credits table.
+     - url: optional external link ("View source" on its page). */
+  projects: [
+    { slug: "my-best-friend-jay", title: "My Best Friend Jay", type: "Short film", year: "",
+      image: null, videoUrl: "https://www.youtube.com/watch?v=tYo0jO_GrQo&t=29s",
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Max Miller" },
+        { role: "Starring Actor", name: "James Murphy" }
+      ] },
+    { slug: "forging-iron-dusk", title: "Forging Iron Dusk", type: "Short film", year: "",
+      image: null, videoUrl: "https://www.youtube.com/watch?v=Xra6bpzmBhM&t=67s",
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "James Murphy" }
+      ] },
+    { slug: "kotor-escape-from-taris", title: "Knights of the Old Republic: Escape from Taris", type: "Short film", year: "",
+      image: null, videoUrl: "https://www.youtube.com/watch?v=SWSa8dvaCSM",
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Austin Parenti" },
+        { role: "Cinematographer", name: "Phil King" },
+        { role: "2nd Unit Camera Operator", name: "James Murphy" }
+      ] },
+    { slug: "the-last-toy-store", title: "The Last Toy Store", type: "Short film", year: "",
+      image: null, videoUrl: "https://www.youtube.com/watch?v=why6EtoQpNQ",
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Rachel Pettway" },
+        { role: "Cinematographer", name: "Max McCabe" },
+        { role: "Scenic Designer", name: "James Murphy" }
+      ] },
+    { slug: "midnight-justice-dawn-of-night-wraith", title: "Midnight Justice: The Dawn of Night Wraith", type: "Short film", year: "",
+      image: null, videoUrl: "https://www.youtube.com/watch?v=9jMnqgMCKT4",
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Max Miller" },
+        { role: "Cinematographer", name: "Constantine Morano" },
+        { role: "Producer", name: "James Murphy" }
+      ] },
+    { slug: "sky-guys", title: "Sky Guys", type: "Short film", year: "",
+      image: null, videoUrl: "https://www.youtube.com/watch?v=Sv-a5apauQI&t=281s",
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Julianne Backherms" },
+        { role: "Starring Actor", name: "James Murphy" }
+      ] },
+    { slug: "the-legend-of-skunk-ape", title: "The Legend of Skunk Ape", type: "Short film", year: "",
+      image: null, videoUrl: "https://www.youtube.com/watch?v=3Ff5KQgyAmA&t=12s",
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Constantine Morano" },
+        { role: "Cinematographer", name: "Max Miller" },
+        { role: "Marty", name: "James Murphy" }
+      ] },
+    { slug: "tales-of-mission-and-zaalbar", title: "The Tales of Mission & Zaalbar", type: "Short film", year: "",
+      image: null, videoUrl: "https://www.youtube.com/watch?v=_6kAz1IJx8Q&t=14s",
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Sophia Kerns & Myla Tumas" },
+        { role: "Cinematographer", name: "Max McCabe" },
+        { role: "Producer & Graphic Artist", name: "James Murphy" }
+      ] },
+    { slug: "above-the-fold", title: "Above the Fold", type: "Short film", year: "",
+      image: null, videoUrl: "https://www.youtube.com/watch?v=rF0aAd_4Dr8&t=140s",
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Rose Warren" },
+        { role: "Cinematographer", name: "Dylan Yuan" },
+        { role: "Camera Operator", name: "James Murphy" }
+      ] },
+    { slug: "future-presence-passed", title: "Future Presence Passed", type: "Short film", year: "",
+      image: null, videoUrl: "https://www.youtube.com/watch?v=eVz5IkvKdgk&t=338s",
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Max Miller" },
+        { role: "Producer & Starring Actor", name: "James Murphy" }
+      ] },
+    { slug: "kotor-ii-search-for-the-star-forge", title: "Knights of the Old Republic II: Search for the Star Forge", type: "Short film", year: "",
+      image: null, videoUrl: null, unreleased: true,
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Austin Parenti" },
+        { role: "Cinematographer", name: "Phil King" },
+        { role: "1st Assistant Camera Operator", name: "James Murphy" }
+      ] },
+    { slug: "ai-in-use", title: "AI in Use", type: "Short film", year: "",
+      image: null, videoUrl: null, unreleased: true,
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Max Miller" },
+        { role: "Cinematographer & Producer", name: "James Murphy" }
+      ] },
+    { slug: "along-the-lines-of-love", title: "Along the Lines of Love", type: "Short film", year: "",
+      image: null, videoUrl: null, unreleased: true,
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Myla Tumas" },
+        { role: "Cinematographer", name: "Austin Parenti" },
+        { role: "Assistant Director & Producer", name: "James Murphy" }
+      ] },
+    { slug: "camp-rock-bottom", title: "Camp Rock Bottom", type: "Short film", year: "",
+      image: null, videoUrl: null, unreleased: true,
+      images: [null, null, null, null, null, null],
+      credits: [
+        { role: "Director", name: "Rose Warren" },
+        { role: "Cinematographer", name: "Elliana Nabhan" },
+        { role: "Assistant Director & Producer", name: "James Murphy" }
+      ] }
   ],
 
-  /* ---------- ABOUT ---------- */
-  about: {
-    statement: "I shoot with what I have, but above all with what I feel.",
-    body: "James Murphy is a filmmaker and director. He is building a body of work across music videos, fiction and commercials - and documenting the whole thing along the way.",
-    linkLabel: "Get in touch",
-    linkUrl: "#contact"
+  /* ---------- FILM PAGE ---------- */
+  filmPage: {
+    introImage: null,           // e.g. "assets/onset.jpg" - full-screen photo behind the intro
+    introText: "A selection of my work, where light, frame and color serve one idea: staying close to people, and letting an image be felt before it is explained.",
+    overviewTitle: "Index"      // label of the full project list view
   },
 
-  /* ---------- CONTACT ---------- */
+  /* ---------- ABOUT PAGE ---------- */
+  about: {
+    portrait: null,             // e.g. "assets/portrait.jpg"
+    headline: "Film director.",
+    statement: "I shoot with what I have, but above all with what I feel.",
+    body: [
+      "James Murphy is a filmmaker and director. He is building a body of work across music videos, fiction and commercials - and documenting the whole thing along the way.",
+      "He is the founder of Appert Films, a production and distribution house built from scratch, and he shoots with whatever is in his hands."
+    ],
+    facts: [
+      { label: "Based in",  value: "Florida, USA" },
+      { label: "Focus",     value: "Music videos, fiction, commercials" },
+      { label: "Studio",    value: "Appert Films" },
+      { label: "Contact",   value: "jwizard.industries@gmail.com" }
+    ],
+    linkLabel: "Get in touch"   // opens the contact popup
+  },
+
+  /* ---------- CONTACT POPUP ---------- */
   contact: {
-    heading: "Let's work together.",
+    heading: "Contact",
+    subline: "Let's work together.",
+    photo: null,                // e.g. "assets/me.jpg" - small round photo in the popup
     name: "James Murphy",
     email: "jwizard.industries@gmail.com",
-    buttonLabel: "Send an email"
+    buttonLabel: "Send message",
+    placeholders: {
+      name: "Your name",
+      email: "your@email.com",
+      subject: "Project inquiry, collaboration...",
+      message: "Tell me about your project..."
+    }
   },
 
   /* ---------- FOOTER ---------- */
