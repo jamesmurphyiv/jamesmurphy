@@ -287,6 +287,11 @@
         <button class="scroll-cue" data-scroll-to="#featured">${esc(h.scrollHint)}<span class="cue-arrows"><i></i><i></i></span></button>
       </section>
 
+      <section class="stats" id="viewsStat">
+        <div class="stat-number" id="viewsCount">&nbsp;</div>
+        <div class="stat-label">Total views across all projects</div>
+      </section>
+
       <section class="featured" id="featured">
         <div class="section-head reveal">
           <h2 class="section-title">${esc(S.featuredTitle)}</h2>
@@ -534,6 +539,41 @@
       </section>`;
   }
 
+  /* ============ VIEWS COUNTER ============ */
+  function initViewsCounter() {
+    const sec = $("#viewsStat");
+    if (!sec) return;
+    const el = $("#viewsCount");
+    const FALLBACK = 1096868; // manual tally baseline, Nov 2 2026
+    const fmt = (n) => Math.round(n).toLocaleString("en-US");
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const show = (total) => {
+      if (reduced) { el.textContent = fmt(total); return; }
+      const start = performance.now(), dur = 2200;
+      const tick = (t) => {
+        const p = Math.min(1, (t - start) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = fmt(total * eased);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    fetch("/api/views")
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error("bad"))))
+      .then((d) => (d && d.total) || FALLBACK)
+      .catch(() => FALLBACK)
+      .then((total) => {
+        let played = false;
+        const io = new IntersectionObserver((entries) => {
+          if (!entries[0].isIntersecting || played) return;
+          played = true;
+          io.disconnect();
+          show(total);
+        }, { threshold: 0.4 });
+        io.observe(sec);
+      });
+  }
+
   /* ============ BOOT ============ */
   renderHeader();
   renderFooter();
@@ -542,6 +582,7 @@
   else if (PAGE === "about") renderAbout();
   else if (PAGE === "project") renderProject();
   else renderHome();
+  initViewsCounter();
   pageTransitions();
   reveals();
   wordReveal();
