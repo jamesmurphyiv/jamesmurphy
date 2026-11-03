@@ -181,7 +181,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 .footer-wordmark {
   font-weight: 900; letter-spacing: -0.04em;
   line-height: 1; text-align: center; white-space: nowrap;
-  user-select: none;
+  width: fit-content; margin: 0 auto; user-select: none;
 }
 .footer-row {
   display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
