@@ -34,7 +34,7 @@ window.SITE = {
     image: null,                // e.g. "assets/hero.jpg" - full-screen background
     video: null,                // e.g. "assets/hero.mp4" - plays instead of the image
     eyebrow: "James Murphy",    // small bold line
-    headline: "Film director.", // the big line
+    headline: "Filmmaker.", // the big line
     tagline: "I shoot music videos, fiction and commercials.",
     linkLeft:  { label: "Watch the films", url: "film.html" },
     linkRight: { label: "Get in touch",    url: "#contact" },   // opens the popup
