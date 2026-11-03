@@ -47,6 +47,12 @@
     return `<div class="${cls} placeholder"><span class="ph-label">${esc(label || "Still coming")}</span></div>`;
   }
 
+  (function () {
+    [["icon","assets/favicon.png","image/png"],["apple-touch-icon","assets/apple-touch-icon.png",""]].forEach(function (d) {
+      var l = document.createElement("link"); l.rel = d[0]; l.href = d[1]; if (d[2]) l.type = d[2]; document.head.appendChild(l);
+    });
+  })();
+
   /* ============ HEADER ============ */
   function renderHeader() {
     const h = $("#siteHeader");
@@ -256,6 +262,8 @@
     root.innerHTML = `
       <section class="hero">
         ${mediaHTML(h, "hero-media", S.name + " - hero still")}
+        <div class="hero-wm" aria-hidden="true"></div>
+        <div class="hero-crest" aria-hidden="true"><i class="hc-fill"></i><img class="hc-ghost" src="assets/crest-outline.png" alt=""><img class="hc-line" src="assets/crest-outline.png" alt=""></div>
         <div class="hero-grain"></div>
         <div class="hero-bottom">
           <div class="hero-text">
