@@ -35,7 +35,7 @@ window.SITE = {
     video: null,                // e.g. "assets/hero.mp4" - plays instead of the image
     eyebrow: "James Murphy",    // small bold line
     headline: "Filmmaker.", // the big line
-    tagline: "Short films and features.",
+    tagline: "Narrative and documentary films, from shorts to features.",
     linkLeft:  { label: "Watch the films", url: "film.html" },
     linkRight: { label: "Get in touch",    url: "#contact" },   // opens the popup
     scrollHint: "Scroll"
