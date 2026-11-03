@@ -507,3 +507,8 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .project-pn { flex-direction: column; }
   .pn-next { text-align: left; margin-left: 0; }
 }
+
+/* ---------- simple placeholder pages (freelance, resume) ---------- */
+.simple-page { min-height: 88svh; padding: 26vh var(--pad) 12vh; }
+.simple-body { margin-top: 40px; max-width: 640px; }
+.simple-body p { font-size: clamp(16px, 1.7vw, 21px); line-height: 1.6; color: var(--ink-dim); margin-bottom: 20px; }
