@@ -213,7 +213,8 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   font-size: 11.5px; letter-spacing: 0.06em; color: var(--ink-dim);
   position: relative; background: var(--bg);
 }
-.footer-socials { display: flex; gap: 18px; }
+.footer-socials { display: flex; gap: 18px; flex-wrap: wrap; justify-content: flex-end; }
+@media (max-width: 560px) { .footer-socials { gap: 14px; } }
 .footer-socials a { transition: color 0.25s ease; }
 .footer-socials a:hover { color: var(--ink); }
 
@@ -374,6 +375,9 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 }
 .modal-person strong { display: block; font-size: 15px; }
 .modal-person span { font-size: 13px; color: var(--ink-dim); }
+.modal-socials { display: flex; gap: 18px; margin: -8px 0 24px; }
+.modal-socials a { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-dim); text-decoration: none; transition: color 0.25s ease; }
+.modal-socials a:hover { color: var(--ink); }
 .modal-rule { border: 0; border-top: 1px solid var(--line); margin-bottom: 24px; }
 #contactForm label {
   display: block; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
