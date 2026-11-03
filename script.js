@@ -573,7 +573,47 @@
       </section>`;
   }
 
-  /* ============ SIMPLE PLACEHOLDER PAGES (freelance, resume) ============ */
+  /* ============ FREELANCE PAGE ============ */
+  function renderFreelance() {
+    const root = $("#page");
+    const F = S.freelance || {};
+    root.innerHTML = `
+      <section class="freelance-hero">
+        <p class="hero-eyebrow rise" style="--d:.05s">${esc(S.name)}</p>
+        <h1 class="hero-headline rise" style="--d:.15s">${esc(F.headline || "Freelance.")}</h1>
+      </section>
+      <section class="statement">
+        <p class="statement-text word-reveal">${esc(F.statement || "")}</p>
+      </section>
+      <section class="freelance-intro">
+        ${(F.intro || []).map((p, i) => `<p class="reveal" style="--d:${(i * 0.1).toFixed(2)}s">${esc(p)}</p>`).join("")}
+      </section>
+      <section class="freelance-services">
+        <div class="section-head reveal"><h2 class="section-title">${esc(F.servicesTitle || "Services")}</h2></div>
+        <dl class="svc-list">
+          ${(F.services || []).map((sv, i) => `<div class="svc-row reveal" style="--d:${(i * 0.05).toFixed(2)}s"><dt>${esc(sv.name)}</dt><dd>${esc(sv.detail)}</dd></div>`).join("")}
+        </dl>
+      </section>
+      <section class="freelance-testimonials">
+        <div class="section-head reveal"><h2 class="section-title">${esc(F.testimonialsTitle || "Testimonials")}</h2></div>
+        <div class="quote-grid">
+          ${(F.testimonials || []).map((t, i) => `
+            <figure class="quote-card reveal" style="--d:${(i * 0.1).toFixed(2)}s">
+              <blockquote>&ldquo;${esc(t.quote)}&rdquo;</blockquote>
+              ${t.name ? `<figcaption><strong>${esc(t.name)}</strong>${t.role ? `<span>${esc(t.role)}</span>` : ""}</figcaption>` : ""}
+            </figure>`).join("")}
+        </div>
+      </section>
+      <section class="freelance-cta">
+        <p class="freelance-cta-line reveal">${esc(F.ctaLine || "")}</p>
+        <div class="cta-row reveal" style="--d:.15s">
+          <a class="btn-solid" href="#contact" data-open-contact>${esc(F.linkLabel || "Get in touch")} &rarr;</a>
+          <a class="btn-outline" href="resume.html">${esc(F.resumeLabel || "View resume")}</a>
+        </div>
+      </section>`;
+  }
+
+  /* ============ SIMPLE PLACEHOLDER PAGES (resume) ============ */
   function renderSimplePage(key) {
     const root = $("#page");
     const P = (S.pages && S.pages[key]) || { headline: key, lines: [] };
@@ -630,7 +670,8 @@
   if (PAGE === "film") renderFilm();
   else if (PAGE === "about") renderAbout();
   else if (PAGE === "project") renderProject();
-  else if (PAGE === "freelance" || PAGE === "resume") renderSimplePage(PAGE);
+  else if (PAGE === "freelance") renderFreelance();
+  else if (PAGE === "resume") renderSimplePage(PAGE);
   else renderHome();
   initViewsCounter();
   pageTransitions();
