@@ -217,8 +217,8 @@ window.SITE = {
     name: "James Murphy",
     email: "jmurphy@appertfilms.com",
     socials: [
-      { label: "LinkedIn", url: "https://www.linkedin.com/in/james-murphy-iv-4b8ab1300/" }
-      // { label: "IMDb", url: "#" }   // add when the IMDb page is ready
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/james-murphy-iv-4b8ab1300/" },
+      { label: "IMDb",     url: "https://www.imdb.com/name/nm16805948/" }
     ],
     buttonLabel: "Send message",
     placeholders: {
@@ -241,7 +241,7 @@ window.SITE = {
       { label: "Instagram", url: "#" },   // paste your Instagram URL between the quotes
       { label: "YouTube",   url: "#" },   // paste your YouTube URL between the quotes
       { label: "LinkedIn",  url: "https://www.linkedin.com/in/james-murphy-iv-4b8ab1300/" },
-      // { label: "IMDb",    url: "#" },   // IMDb page coming - paste the URL here when ready
+      { label: "IMDb",      url: "https://www.imdb.com/name/nm16805948/" },
       { label: "Email",     url: "mailto:jmurphy@appertfilms.com" }
     ]
   }
