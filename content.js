@@ -175,15 +175,15 @@ window.SITE = {
   /* ---------- ABOUT PAGE ---------- */
   about: {
     portrait: null,             // e.g. "assets/portrait.jpg"
-    headline: "Film director.",
+    headline: "Filmmaker.",
     statement: "I shoot with what I have, but above all with what I feel.",
     body: [
-      "James Murphy is a filmmaker and director. He is building a body of work across music videos, fiction and commercials - and documenting the whole thing along the way.",
+      "James Murphy is a filmmaker. He is building a body of work across narrative fiction and documentary - and documenting the whole thing along the way.",
       "He is the founder of Appert Films, a production and distribution house built from scratch, and he shoots with whatever is in his hands."
     ],
     facts: [
       { label: "Based in",  value: "New York" },
-      { label: "Focus",     value: "Music videos, fiction, commercials" },
+      { label: "Focus",     value: "Narrative fiction, documentary" },
       { label: "Studio",    value: "Appert Films" },
       { label: "Contact",   value: "jwizard.industries@gmail.com" }
     ],
