@@ -275,7 +275,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 }
 .overview.open { display: flex; gap: clamp(24px, 4vw, 64px); animation: fade-in 0.35s ease both; }
 .overview-back { position: absolute; top: 32px; left: var(--pad); }
-.overview-table-wrap { flex: 1; min-width: 0; overflow-y: auto; padding-top: 24px; }
+.overview-table-wrap { flex: 1; min-width: 0; overflow-y: auto; padding-top: 24px; padding-right: 24px; }
 .overview-head {
   display: grid; grid-template-columns: 70px 1fr auto; gap: 20px;
   font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint);
@@ -303,6 +303,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   padding: 120px var(--pad) 8vh;
 }
 .about-portrait { width: clamp(240px, 30vw, 420px); aspect-ratio: 3 / 4; flex-shrink: 0; border-radius: 4px; overflow: hidden; }
+.about-portrait .placeholder { height: 100%; }
 .about-hero-text { padding-bottom: 8px; }
 .about-body { padding: 0 var(--pad) 10vh; max-width: 860px; }
 .about-body > p { font-size: clamp(16px, 1.7vw, 21px); line-height: 1.6; color: var(--ink-dim); margin-bottom: 28px; }
@@ -382,6 +383,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
    ============================================================ */
 @media (max-width: 860px) {
   .films-grid { grid-template-columns: 1fr; }
+  .viewer-bg-shade { background: linear-gradient(to right, rgba(0,0,0,0.78), rgba(0,0,0,0.42) 55%, rgba(0,0,0,0.2)), linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.12) 50%, rgba(0,0,0,0.25)); }
   .overview-preview { display: none; }
   .viewer-credits { display: none; }
   .viewer-list-wrap { height: 40vh; }
@@ -414,7 +416,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
    PROJECT PAGE
    ============================================================ */
 .project-close {
-  position: fixed; top: 22px; right: var(--pad); z-index: 60;
+  position: fixed; top: 84px; right: var(--pad); z-index: 60;
   width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
   font-size: 24px; color: var(--ink-dim); background: rgba(255,255,255,0.05);
   border: 1px solid var(--line); border-radius: 50%;
