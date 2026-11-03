@@ -126,7 +126,7 @@ window.SITE = {
         { role: "Cinematographer", name: "Max McCabe" },
         { role: "Producer & Graphic Artist", name: "James Murphy" }
       ] },
-    { slug: "kotor-escape-from-taris", title: "Knights of the Old Republic: Escape from Taris", type: "Short film", year: "", releaseDate: "2026-05-07",
+    { slug: "kotor-escape-from-taris", title: "Knights of the Old Republic: Escape from Taris", type: "Feature", year: "", releaseDate: "2026-05-07",
       image: "assets/kotor-escape-from-taris-card.jpg", videoUrl: "https://www.youtube.com/watch?v=SWSa8dvaCSM",
       images: ["assets/kotor-escape-from-taris-1.jpg", "assets/kotor-escape-from-taris-2.jpg", "assets/kotor-escape-from-taris-3.jpg", "assets/kotor-escape-from-taris-4.jpg", "assets/kotor-escape-from-taris-5.jpg", "assets/kotor-escape-from-taris-6.jpg"],
       credits: [
@@ -149,7 +149,7 @@ window.SITE = {
         { role: "Director", name: "Max Miller" },
         { role: "Starring Actor", name: "James Murphy" }
       ] },
-    { slug: "iron-dusk", title: "Iron Dusk", type: "Short film", year: "", releaseDate: "2024-12-13",
+    { slug: "iron-dusk", title: "Iron Dusk", type: "Feature", year: "", releaseDate: "2024-12-13",
       image: "assets/iron-dusk-card.jpg", videoUrl: "https://www.youtube.com/watch?v=jMANytQTdPg&t=57s",
       images: ["assets/iron-dusk-1.jpg", "assets/iron-dusk-2.jpg", "assets/iron-dusk-3.jpg", "assets/iron-dusk-4.jpg", "assets/iron-dusk-5.jpg", "assets/iron-dusk-6.jpg"],
       credits: [
@@ -157,7 +157,7 @@ window.SITE = {
         { role: "Cinematographer", name: "Phil King" },
         { role: "Visual Effects", name: "James Murphy" }
       ] },
-    { slug: "forging-iron-dusk", title: "Forging Iron Dusk", type: "Short film", year: "", releaseDate: "2024-06-16",
+    { slug: "forging-iron-dusk", title: "Forging Iron Dusk", type: "Documentary", year: "", releaseDate: "2024-06-16",
       image: null, videoUrl: "https://www.youtube.com/watch?v=Xra6bpzmBhM&t=67s",
       images: [null, null, null, null, null, null],
       credits: [
