@@ -48,11 +48,17 @@
   }
 
   /* ============ HEADER ============ */
+  (function () {
+    [["icon","assets/favicon.png","image/png"],["apple-touch-icon","assets/apple-touch-icon.png",""]].forEach(function (d) {
+      var l = document.createElement("link"); l.rel = d[0]; l.href = d[1]; if (d[2]) l.type = d[2]; document.head.appendChild(l);
+    });
+  })();
+
   function renderHeader() {
     const h = $("#siteHeader");
     if (!h) return;
     h.innerHTML = `
-      <a class="monogram" href="index.html">${esc(S.monogram || S.name)}</a>
+      <a class="monogram" href="index.html" aria-label="${esc(S.name)}"><img src="assets/crest.png" alt="${esc(S.name)}"></a>
       <nav class="main-nav">
         ${S.nav.map((n) => n.url === "#contact"
           ? `<a href="#contact" data-open-contact>${esc(n.label)}</a>`
@@ -257,6 +263,8 @@
       <section class="hero">
         ${mediaHTML(h, "hero-media", S.name + " - hero still")}
         <div class="hero-grain"></div>
+        <div class="hero-wm" aria-hidden="true"></div>
+        <div class="hero-crest" aria-hidden="true"><img src="assets/crest.png" alt=""></div>
         <div class="hero-bottom">
           <div class="hero-text">
             <h1 class="hero-headline rise" style="--d:.05s"><span>${esc(h.eyebrow)}</span><br>${esc(h.headline)}</h1>

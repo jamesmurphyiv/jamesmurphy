@@ -32,7 +32,7 @@ window.SITE = {
   /* ---------- HOME: HERO (full-screen opening) ---------- */
   hero: {
     image: null,                // e.g. "assets/hero.jpg" - full-screen background
-    video: null,                // e.g. "assets/hero.mp4" - plays instead of the image
+    video: "assets/hero.mp4",   // e.g. "assets/hero.mp4" - plays instead of the image
     eyebrow: "James Murphy",    // small bold line
     headline: "Filmmaker.", // the big line
     tagline: "Narrative and documentary films, from shorts to features.",

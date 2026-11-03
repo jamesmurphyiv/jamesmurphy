@@ -50,7 +50,8 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   padding: 22px var(--pad);
   mix-blend-mode: difference; color: #fff;
 }
-.monogram { font-weight: 800; font-size: 18px; letter-spacing: 0.06em; }
+.monogram { font-weight: 800; font-size: 18px; letter-spacing: 0.06em; display: block; }
+.monogram img { height: 38px; width: auto; display: block; }
 .main-nav { display: flex; gap: clamp(18px, 3vw, 40px); }
 .main-nav a {
   font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
@@ -79,6 +80,10 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 .hero { position: relative; height: 100svh; min-height: 560px; overflow: hidden; }
 .hero-media { position: absolute; inset: 0; }
 .hero-media video, .hero-media img { transform: scale(1.06); animation: hero-settle 2.4s var(--ease) both; }
+.hero-media video { filter: blur(12px); transform: scale(1.08); animation: none; }
+.hero-wm { position: absolute; inset: 0; background: url(assets/watermark.png) center / auto 100% no-repeat; pointer-events: none; }
+.hero-crest { position: absolute; left: 50%; top: 50%; height: clamp(170px, 30svh, 330px); aspect-ratio: 800 / 936; transform: translate(-50%, -50%); pointer-events: none; }
+.hero-crest > * { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 @keyframes hero-settle { from { transform: scale(1.12); } to { transform: scale(1.06); } }
 .hero-grain { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.25) 100%); }
 .hero-bottom {
@@ -393,6 +398,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 }
 @media (max-width: 560px) {
   .hero-bottom { flex-direction: column; align-items: flex-start; bottom: 110px; }
+  .hero-wm { background-size: auto 52%; }
   .hero-links { flex-direction: row; gap: 20px; text-align: left; }
   .hero-links a { margin-left: 0; }
   .film-intro .scroll-cue { display: none; }
