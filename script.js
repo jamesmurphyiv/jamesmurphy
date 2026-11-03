@@ -31,7 +31,7 @@
     const id = ytId(url);
     if (!id) return null;
     const start = ytStart(url);
-    return "https://www.youtube-nocookie.com/embed/" + id + "?rel=0" + (start ? "&start=" + start : "");
+    return "https://www.youtube-nocookie.com/embed/" + id + "?rel=0&playsinline=1" + (start ? "&start=" + start : "");
   }
   function projectUrl(p) { return "project.html?p=" + encodeURIComponent(p.slug); }
 
@@ -381,7 +381,7 @@
       $("#viewerBgs").innerHTML = state.projects.map((p, i) =>
         `<div class="viewer-bg" data-i="${i}"><a class="viewer-bg-link" href="${projectUrl(p)}" aria-label="Open ${esc(p.title)}">${mediaHTML(p, "viewer-bg-media", p.title)}<div class="viewer-bg-shade"></div></a></div>`).join("");
       $("#viewerList").innerHTML = state.projects.map((p, i) =>
-        `<li data-i="${i}"><button>${esc(p.title)}</button></li>`).join("");
+        `<li data-i="${i}"><button aria-label="Select ${esc(p.title)}"><strong>${esc(p.title)}</strong><span>${esc(p.type || "Film")}</span></button></li>`).join("");
       $$("#viewerList li button").forEach((b, i) => b.addEventListener("click", () => jump(i)));
       buildFilters();
       buildOverview();
@@ -398,11 +398,16 @@
         state.active = idx;
         const proj = state.projects[idx];
         $$("#viewerBgs .viewer-bg").forEach((bg) => bg.classList.toggle("on", +bg.dataset.i === idx));
-        $$("#viewerList li").forEach((li) => li.classList.toggle("on", +li.dataset.i === idx));
+        $$("#viewerList li").forEach((li) => {
+          const active = +li.dataset.i === idx;
+          li.classList.toggle("on", active);
+          li.querySelector("button").setAttribute("aria-current", active ? "true" : "false");
+        });
         const list = $("#viewerList");
-        const rowH = list.children.length ? list.children[0].offsetHeight : 34;
+        const row = list.children[idx];
         const wrapH = $(".viewer-list-wrap").offsetHeight;
-        list.style.transform = "translateY(" + (wrapH / 2 - (idx + 0.5) * rowH) + "px)";
+        const rowCenter = row ? row.offsetTop + row.offsetHeight / 2 : 0;
+        list.style.transform = "translateY(" + (wrapH / 2 - rowCenter) + "px)";
         $("#viewerCredits").innerHTML = (proj.credits || []).slice(0, 4).map((c) =>
           `<div class="credit-row"><span>${esc(c.role)}</span><strong>${esc(c.name)}</strong></div>`).join("") +
           `<a class="viewer-open text-link" href="${projectUrl(proj)}">View project &rarr;</a>`;
@@ -472,7 +477,16 @@
 
     const embed = ytEmbed(p.videoUrl);
     const player = embed
-      ? `<div class="project-player rise" style="--d:.15s"><iframe src="${esc(embed)}" title="${esc(p.title)}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`
+      ? `<div class="project-cinema rise" style="--d:.15s">
+          <div class="project-player" id="projectPlayer">
+            <button class="cinema-poster" id="cinemaPlay" aria-label="Play ${esc(p.title)}">
+              <img src="${esc(p.image || ytThumb(p.videoUrl))}" alt="" fetchpriority="high">
+              <span class="cinema-play-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+              <span class="cinema-poster-caption">Watch film</span>
+            </button>
+          </div>
+          <div class="cinema-caption"><span>${esc(p.title)}</span><a href="${esc(p.videoUrl)}" target="_blank" rel="noopener">YouTube &nearr;</a></div>
+        </div>`
       : `<div class="project-player project-player-unreleased rise" style="--d:.15s"><div class="placeholder"><span class="ph-label">Unreleased - coming soon</span></div></div>`;
 
     const metaRows = [
@@ -511,6 +525,19 @@
         <a class="pn-next" href="${projectUrl(next)}"><span>Next project</span><strong>${esc(next.title)}</strong></a>
       </nav>`;
 
+    const play = $("#cinemaPlay");
+    if (play) play.addEventListener("click", () => {
+      // Load the official player only after a visitor chooses to watch.
+      // No overlays, cropping or attribution hiding during playback.
+      const iframe = document.createElement("iframe");
+      iframe.src = embed + "&autoplay=1";
+      iframe.title = p.title;
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen";
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      $("#projectPlayer").replaceChildren(iframe);
+      iframe.focus();
+    });
     $("#projectClose").addEventListener("click", () => { location.href = "film.html"; });
   }
 
