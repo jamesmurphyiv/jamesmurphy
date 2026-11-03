@@ -35,7 +35,7 @@ window.SITE = {
     video: null,                // e.g. "assets/hero.mp4" - plays instead of the image
     eyebrow: "James Murphy",    // small bold line
     headline: "Filmmaker.", // the big line
-    tagline: "I shoot music videos, fiction and commercials.",
+    tagline: "Narrative and documentary films. New Jersey & Palm Beach.",
     linkLeft:  { label: "Watch the films", url: "film.html" },
     linkRight: { label: "Get in touch",    url: "#contact" },   // opens the popup
     scrollHint: "Scroll"
@@ -182,7 +182,7 @@ window.SITE = {
       "He is the founder of Appert Films, a production and distribution house built from scratch, and he shoots with whatever is in his hands."
     ],
     facts: [
-      { label: "Based in",  value: "New York" },
+      { label: "Based in",  value: "New Jersey & Palm Beach" },
       { label: "Focus",     value: "Narrative fiction, documentary" },
       { label: "Studio",    value: "Appert Films" },
       { label: "Contact",   value: "jwizard.industries@gmail.com" }
@@ -209,7 +209,7 @@ window.SITE = {
   /* ---------- FOOTER ---------- */
   footer: {
     wordmark: "James Murphy®",       // giant bottom wordmark
-    location: "New York",         // shown next to the live clock
+    location: "New Jersey & Palm Beach",         // shown next to the live clock
     timezone: "America/New_York",     // for the clock
     copyright: "James Murphy",
     socials: [
