@@ -65,7 +65,7 @@
     const f = $("#siteFooter");
     if (!f) return;
     f.innerHTML = `
-      <div class="footer-wordmark" aria-hidden="true">${esc(S.name)}</div>
+      <div class="footer-wordmark" aria-hidden="true">${esc(S.footer.wordmark || S.name)}</div>
       <div class="footer-row">
         <span>© ${new Date().getFullYear()} ${esc(S.footer.copyright)} · All rights reserved</span>
         <span id="footerClock"></span>
