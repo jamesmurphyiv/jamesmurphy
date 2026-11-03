@@ -228,7 +228,7 @@ window.SITE = {
     wordmark: "James Murphy®",       // giant bottom wordmark
     location: "New York",         // shown next to the live clock
     timezone: "America/New_York",     // for the clock
-    copyright: "James Murphy",
+    copyright: "James Murphy & The Appert Company",
     socials: [
       { label: "Freelance", url: "freelance.html" },
       { label: "Resume",    url: "resume.html"    },
