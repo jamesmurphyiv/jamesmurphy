@@ -123,8 +123,8 @@ window.SITE = {
         { role: "Producer", name: "James Murphy" }
       ] },
     { slug: "sky-guys", title: "Sky Guys", type: "Short film", year: "",
-      image: null, videoUrl: "https://www.youtube.com/watch?v=Sv-a5apauQI&t=281s",
-      images: [null, null, null, null, null, null],
+      image: "assets/sky-guys-card.jpg", videoUrl: "https://www.youtube.com/watch?v=Sv-a5apauQI&t=281s",
+      images: ["assets/sky-guys-1.jpg", "assets/sky-guys-2.jpg", "assets/sky-guys-3.jpg", "assets/sky-guys-4.jpg", "assets/sky-guys-5.jpg", "assets/sky-guys-6.jpg"],
       credits: [
         { role: "Director", name: "Julianne Backherms" },
         { role: "Starring Actor", name: "James Murphy" }
