@@ -215,7 +215,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 .viewer-bgs, .viewer-bg { position: absolute; inset: 0; }
 .viewer-bg { opacity: 0; transition: opacity 0.7s ease; }
 .viewer-bg.on { opacity: 1; }
-.viewer-bg-media { position: absolute; inset: 0; }
+.viewer-bg-media { position: absolute; inset: 0; filter: brightness(0.65); }
 .viewer-bg-shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.12) 50%, rgba(0,0,0,0.25)); }
 .viewer-top {
   position: absolute; top: 84px; left: var(--pad); right: var(--pad); z-index: 5;
@@ -233,9 +233,9 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   mask-image: linear-gradient(180deg, transparent, #000 18%, #000 82%, transparent);
 }
 .viewer-list { transition: transform 0.6s var(--ease); }
-.viewer-list li { height: 34px; display: flex; align-items: center; }
+.viewer-list li { height: 38px; display: flex; align-items: center; }
 .viewer-list button {
-  font-size: 14px; text-align: left; color: var(--ink-faint);
+  font-size: 17px; font-weight: 600; text-align: left; color: rgba(245, 244, 242, 0.66);
   transition: color 0.35s ease, transform 0.35s var(--ease); white-space: nowrap;
 }
 .viewer-list button strong { font-weight: 700; }
@@ -387,7 +387,8 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .overview-preview { display: none; }
   .viewer-credits { display: none; }
   .viewer-list-wrap { height: 40vh; }
-  .viewer-list button { font-size: 12.5px; }
+  .viewer-list li { height: 44px; }
+  .viewer-list button { font-size: 14px; line-height: 1.3; white-space: normal; }
   .about-hero { flex-direction: column; align-items: flex-start; justify-content: flex-end; }
 }
 @media (max-width: 560px) {
@@ -473,7 +474,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 .pn-next { text-align: right; margin-left: auto; }
 .project-missing { min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; }
 .viewer-bg-link { position: absolute; inset: 0; display: block; }
-.viewer-open { margin-top: 14px; display: inline-block; }
+.viewer-open { margin-top: 14px; padding-bottom: 12px; display: inline-block; }
 
 @media (max-width: 860px) {
   .project-main { grid-template-columns: 1fr; }
@@ -483,4 +484,4 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .project-images-grid { grid-template-columns: 1fr; }
   .project-pn { flex-direction: column; }
   .pn-next { text-align: left; margin-left: 0; }
-}
+             }
