@@ -209,7 +209,7 @@ window.SITE = {
   /* ---------- FOOTER ---------- */
   footer: {
     wordmark: "James Murphy®",       // giant bottom wordmark
-    location: "New Jersey & Palm Beach",         // shown next to the live clock
+    location: "New York",         // shown next to the live clock
     timezone: "America/New_York",     // for the clock
     copyright: "James Murphy",
     socials: [
