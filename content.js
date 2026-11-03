@@ -193,15 +193,44 @@ window.SITE = {
     linkLabel: "Get in touch"   // opens the contact popup
   },
 
-  /* ---------- SIMPLE PAGES (freelance + resume) ----------
-     Placeholders for now - the real freelance page and the
-     resume PDF go here later. */
+  /* ---------- FREELANCE PAGE ----------
+     Services, approach and testimonials.
+     NOTE: the testimonials below are PLACEHOLDERS - realistic
+     filler quotes with no names, so the layout is finished. To
+     swap in a real one, replace the text between the quotes and
+     add  , name: "Real Name", role: "Project"  to its block. */
+  freelance: {
+    headline: "Freelance.",
+    statement: "Everything I take on, I do with an artist's intentionality.",
+    intro: [
+      "I'm a director, cinematographer and producer with 20 film credits and over 1.1 million views on released work - and I take on select freelance projects.",
+      "Music video, short film, commercial or live broadcast: I bring the same thing to every job. Nothing in the frame is an accident, and nothing leaves my hands until it says what it was meant to say."
+    ],
+    servicesTitle: "Services",
+    services: [
+      { name: "Directing",                 detail: "Concept through final cut - one clear vision, carried through every decision." },
+      { name: "Cinematography",            detail: "Light, frame and color in service of a single idea." },
+      { name: "Camera Operation",          detail: "Camera op, 1st AC and 2nd unit work on narrative and commercial sets." },
+      { name: "Producing",                 detail: "Production management and executive producing, prep through delivery." },
+      { name: "Live Broadcast",            detail: "Multi-camera live production with a cinematic eye." },
+      { name: "Videography & Photography", detail: "Events, portraits and branded content." },
+      { name: "Acting",                    detail: "Leads and supporting roles across student and indie productions." },
+      { name: "Design & Marketing",        detail: "Graphic design, key art and release strategy for your project." }
+    ],
+    testimonialsTitle: "Kind Words",
+    testimonials: [
+      { quote: "Working with James felt like watching someone paint with a camera. Every choice had a reason behind it." },
+      { quote: "He treated our small project like a feature film. The result speaks for itself." },
+      { quote: "Prepared, calm and relentless about the details. Exactly who you want on set." }
+    ],
+    ctaLine: "Have a project in mind?",
+    linkLabel: "Get in touch",   // opens the contact popup
+    resumeLabel: "View resume"   // links to resume.html
+  },
+
+  /* ---------- RESUME PAGE ----------
+     Placeholder for now - the resume PDF goes here later. */
   pages: {
-    freelance: {
-      title: "Freelance",
-      headline: "Freelance.",
-      lines: ["Available for select projects. The full page is coming soon."]
-    },
     resume: {
       title: "Resume",
       headline: "Resume.",
