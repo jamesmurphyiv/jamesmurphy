@@ -47,8 +47,11 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 .site-header {
   position: fixed; inset: 0 0 auto 0; z-index: 60;
   display: flex; justify-content: space-between; align-items: center;
-  padding: 22px var(--pad);
-  mix-blend-mode: difference; color: #fff;
+  padding: calc(22px + env(safe-area-inset-top, 0px)) var(--pad) 22px;
+  background: rgba(6, 6, 6, 0.55);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  color: #fff;
 }
 .monogram { font-weight: 800; font-size: 18px; letter-spacing: 0.06em; display: block; }
 .monogram img { height: 38px; width: auto; display: block; }
@@ -434,6 +437,9 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .viewer-list-wrap { height: 34vh; }
   .fact-row { grid-template-columns: 1fr; gap: 4px; }
   .footer-row { justify-content: center; text-align: center; }
+  /* About page: flow sections naturally on phones instead of tall vh gaps. */
+  body[data-page="about"] .about-hero { min-height: 0; gap: 32px; padding: calc(96px + env(safe-area-inset-top, 0px)) var(--pad) 8vh; }
+  body[data-page="about"] .statement { min-height: 0; gap: 32px; padding: 10vh var(--pad); }
 }
 
 /* ============================================================
@@ -595,4 +601,4 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 }
 @media (max-width: 560px) {
   .viewer-list-wrap { left: 16px; right: 16px; height: 34vh; }
-}
+               }
