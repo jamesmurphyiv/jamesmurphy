@@ -176,7 +176,7 @@ window.SITE = {
   /* ---------- ABOUT PAGE ---------- */
   about: {
     portrait: null,             // e.g. "assets/portrait.jpg"
-    note: "assets/note.webp",   // handwritten note (white ink, transparent bg)
+    note: null,                // handwritten note (white ink, transparent bg) - removed for now; data-URI version was assets/about-note-img.js
     headline: "Filmmaker.",
     statement: "It's kind of fun to do the impossible.",
     statementSig: "assets/disney-sig.webp",   // Walt Disney signature under the quote
