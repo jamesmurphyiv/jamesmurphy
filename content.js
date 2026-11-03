@@ -33,7 +33,7 @@ window.SITE = {
   hero: {
     image: null,                // e.g. "assets/hero.jpg" - full-screen background
     video: null,                // e.g. "assets/hero.mp4" - plays instead of the image
-    eyebrow: "James Murphy",    // small bold line
+    eyebrow: "James Murphy®",    // small bold line
     headline: "Film director.", // the big line
     tagline: "I shoot music videos, fiction and commercials.",
     linkLeft:  { label: "Watch the films", url: "film.html" },
@@ -202,7 +202,7 @@ window.SITE = {
       "He is the founder of Appert Films, a production and distribution house built from scratch, and he shoots with whatever is in his hands."
     ],
     facts: [
-      { label: "Based in",  value: "Florida, USA" },
+      { label: "Based in",  value: "New York" },
       { label: "Focus",     value: "Music videos, fiction, commercials" },
       { label: "Studio",    value: "Appert Films" },
       { label: "Contact",   value: "jwizard.industries@gmail.com" }
@@ -228,7 +228,7 @@ window.SITE = {
 
   /* ---------- FOOTER ---------- */
   footer: {
-    location: "Florida, USA",         // shown next to the live clock
+    location: "New York",         // shown next to the live clock
     timezone: "America/New_York",     // for the clock
     copyright: "James Murphy",
     socials: [
