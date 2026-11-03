@@ -426,8 +426,8 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .hero-bottom { flex-direction: column; align-items: flex-start; bottom: 110px; }
   /* Center the foreground crest between the nav and the intro on phones. */
   .hero-crest { top: 38svh; height: clamp(180px, 34svh, 320px); }
-  /* Zoom the crest watermark so it crops/fills like the desktop hero. */
-  .hero-wm { background-size: auto 170%; }
+  /* Zoom the crest watermark so it crops/fills like the desktop hero, offset left so the ring and laurel show around the centered white crest. */
+  .hero-wm { background-size: auto 170%; background-position: calc(50% - 100px) center; }
   .hero-links { flex-direction: row; gap: 20px; text-align: left; }
   .hero-links a { margin-left: 0; }
   .film-intro .scroll-cue { display: none; }
