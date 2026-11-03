@@ -179,7 +179,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 /* ---------- footer ---------- */
 .site-footer { padding: 12vh var(--pad) 0; overflow: hidden; }
 .footer-wordmark {
-  font-size: clamp(56px, 12.5vw, 220px); font-weight: 900; letter-spacing: -0.04em;
+  font-size: clamp(32px, 10.2vw, 200px); font-weight: 900; letter-spacing: -0.04em;
   line-height: 0.82; text-align: center; white-space: nowrap;
   transform: translateY(0.12em); user-select: none;
 }
@@ -483,4 +483,4 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .project-images-grid { grid-template-columns: 1fr; }
   .project-pn { flex-direction: column; }
   .pn-next { text-align: left; margin-left: 0; }
-}
+   }
