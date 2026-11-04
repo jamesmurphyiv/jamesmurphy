@@ -93,7 +93,8 @@ body[data-page="home"] .site-header { -webkit-backdrop-filter: none; backdrop-fi
 }
 .hero-media video, .hero-media img { transform: scale(1.06); animation: hero-settle 2.4s var(--ease) both; }
 /* Higher-contrast grade so the crest's difference blend flips hard (white on dark, black on bright). */
-.hero-media video { filter: contrast(1.28) brightness(1.06); }
+/* prev grade (revert point): contrast(1.28) brightness(1.06) */
+.hero-media video { filter: contrast(2.1) brightness(1.14); }
 .hero-wm { position: absolute; inset: 0; background: url(assets/watermark.png) center / auto 100% no-repeat; pointer-events: none; }
 /* TEMP (Nov 3): big background crest hidden at James's request - delete this rule to bring it back. */
 .hero-wm { display: none; }
