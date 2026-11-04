@@ -53,6 +53,8 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   backdrop-filter: blur(14px);
   color: #fff;
 }
+/* Home only: no backdrop blur on the header (tint + safe-area padding stay). */
+body[data-page="home"] .site-header { -webkit-backdrop-filter: none; backdrop-filter: none; }
 .monogram { font-weight: 800; font-size: 18px; letter-spacing: 0.06em; display: block; }
 .monogram img { height: 38px; width: auto; display: block; }
 .main-nav { display: flex; gap: clamp(18px, 3vw, 40px); }
@@ -605,4 +607,4 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 }
 @media (max-width: 560px) {
   .viewer-list-wrap { left: 16px; right: 16px; height: 34vh; }
-}
+   }
