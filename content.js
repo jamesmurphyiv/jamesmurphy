@@ -168,6 +168,7 @@ window.SITE = {
 
   /* ---------- FILM PAGE ---------- */
   filmPage: {
+    introVideo: "assets/hero.mp4", // plays behind the intro (the home hero video)
     introImage: null,           // e.g. "assets/onset.jpg" - full-screen photo behind the intro
     introText: "A selection of my work, where light, frame and color serve one idea: staying close to people, and letting an image be felt before it is explained.",
     overviewTitle: "Index"      // label of the full project list view
