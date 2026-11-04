@@ -50,7 +50,7 @@ window.SITE = {
   ],
 
   /* ---------- HOME: STATEMENT (lights up word by word as you scroll) ---------- */
-  statement: "Fifteen credits at sixteen. Director, producer, DP, actor - whatever the film needs, that's me.",
+  statement: "Fifteen credits at sixteen. Director, producer, cinematographer, actor - whatever the film needs, that's me.",
 
   /* ---------- HOME: FEATURED PROJECTS (grid under the statement) ---------- */
   featuredTitle: "Projects",
