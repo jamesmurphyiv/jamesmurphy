@@ -170,7 +170,7 @@ window.SITE = {
   filmPage: {
     introVideo: "assets/hero.mp4", // plays behind the intro (the home hero video)
     introImage: null,           // e.g. "assets/onset.jpg" - full-screen photo behind the intro
-    introText: "Every film I've made. Two features, eight shorts and a documentary.",
+    introText: "Every film I've made. All in one place.",
     overviewTitle: "Index"      // label of the full project list view
   },
 
