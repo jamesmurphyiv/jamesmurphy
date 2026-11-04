@@ -182,8 +182,10 @@ window.SITE = {
     statement: "It's kind of fun to do the impossible.",
     statementSig: "assets/disney-sig.webp",   // Walt Disney signature under the quote
     body: [
-      "James Murphy is a filmmaker. He is building a body of work across narrative fiction and documentary - and documenting the whole thing along the way.",
-      "He is the founder of Appert Films, a production and distribution house built from scratch, and he shoots with whatever is in his hands."
+      "James Murphy is a filmmaker. He writes, directs, shoots and produces his own work across narrative fiction and documentary, and he documents the whole thing along the way.",
+      "He started young and never waited for permission. No crew, no budget, no problem. If there is a story he wants to tell, he finds a way to shoot it with whatever is in his hands, and he finishes it.",
+      "Every project is a bet on himself, and each one is bigger than the last. The goal is not one great film. The goal is a body of work.",
+      "He is based between Palm Beach and New York, and he is just getting started."
     ],
     facts: [
       { label: "Based in",  value: "Palm Beach, Florida & New York, New York" },
