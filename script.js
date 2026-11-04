@@ -322,7 +322,7 @@
     const F = S.filmPage;
     root.innerHTML = `
       <section class="film-intro" id="filmIntro">
-        ${mediaHTML({ image: F.introImage }, "film-intro-media", "On set")}
+        ${mediaHTML({ video: F.introVideo || null, image: F.introImage }, "film-intro-media", "On set")}
         <div class="film-intro-text">
           <h1 class="film-intro-headline rise" style="--d:.05s">${esc(F.introText)}</h1>
         </div>
