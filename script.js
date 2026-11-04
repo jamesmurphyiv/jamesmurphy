@@ -230,7 +230,7 @@
 
   function wordReveal() {
     $$(".word-reveal").forEach((el) => {
-      const words = el.textContent.trim().split(/\s+/);
+      const words = el.textContent.trim().split(/ +/);
       el.innerHTML = words.map((w) => `<span class="w">${esc(w)}</span>`).join(" ");
       const spans = $$(".w", el);
       function update() {
