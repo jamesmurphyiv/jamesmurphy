@@ -133,7 +133,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 }
 .statement-text {
   font-size: clamp(24px, 3.4vw, 46px); font-weight: 700; letter-spacing: -0.01em;
-  line-height: 1.25; max-width: 22ch;
+  line-height: 1.25; max-width: 22ch; text-wrap: balance;
 }
 .word-reveal .w { opacity: 0.14; transition: opacity 0.35s ease; }
 .statement-by { font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-faint); margin: 0; }
