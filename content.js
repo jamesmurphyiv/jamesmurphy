@@ -44,7 +44,7 @@ window.SITE = {
 
   /* ---------- HOME: STATS STRIP (scrolling under the hero) ---------- */
   brandStrip: [
-    "15 CREDITS AT 16", "1.1M+ TOTAL VIEWS", "~1.7M HOURS WATCHED (EST.)",
+    "15 CREDITS AT 16", "1.1M+ TOTAL VIEWS", "~1.7M HOURS WATCHED",
     "2 FEATURE FILMS", "8 SHORT FILMS", "1 DOCUMENTARY",
     "11 PROJECTS", "FOUNDING APPERT FILMS"
   ],
@@ -170,7 +170,7 @@ window.SITE = {
   filmPage: {
     introVideo: "assets/hero.mp4", // plays behind the intro (the home hero video)
     introImage: null,           // e.g. "assets/onset.jpg" - full-screen photo behind the intro
-    introText: "A selection of my work, where light, frame and color serve one idea: staying close to people, and letting an image be felt before it is explained.",
+    introText: "Eleven projects and counting. Everything I've made so far.",
     overviewTitle: "Index"      // label of the full project list view
   },
 
@@ -210,7 +210,7 @@ window.SITE = {
     servicesTitle: "Services",
     services: [
       { name: "Directing",                 detail: "Concept through final cut - one clear vision, carried through every decision." },
-      { name: "Cinematography",            detail: "Light, frame and color in service of a single idea." },
+      { name: "Cinematography",            detail: "Lighting, framing and color that put the story first." },
       { name: "Camera Operation",          detail: "Camera op, 1st AC and 2nd unit work on narrative and commercial sets." },
       { name: "Producing",                 detail: "Production management and executive producing, prep through delivery." },
       { name: "Live Broadcast",            detail: "Multi-camera live production with a cinematic eye." },
@@ -242,7 +242,7 @@ window.SITE = {
   /* ---------- CONTACT POPUP ---------- */
   contact: {
     heading: "Contact",
-    subline: "Let's work together.",
+    subline: "Tell me what you're making.",
     photo: null,                // e.g. "assets/me.jpg" - small round photo in the popup
     name: "James Murphy",
     email: "jmurphy@appertfilms.com",
