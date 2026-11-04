@@ -133,7 +133,7 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
 }
 .statement-text {
   font-size: clamp(24px, 3.4vw, 46px); font-weight: 700; letter-spacing: -0.01em;
-  line-height: 1.25; max-width: 22ch; text-wrap: balance;
+  line-height: 1.25; max-width: 34ch; text-wrap: balance;
 }
 .word-reveal .w { opacity: 0.14; transition: opacity 0.35s ease; }
 .statement-by { font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-faint); margin: 0; }
@@ -421,6 +421,9 @@ body.page-in.page-in-done { opacity: 1; transform: none; }
   .viewer-list li { height: 44px; }
   .viewer-list button { font-size: 14px; line-height: 1.3; white-space: normal; }
   .about-hero { flex-direction: column; align-items: flex-start; justify-content: flex-end; }
+  /* Home statement: 3 balanced lines on phones - slightly smaller type, near-full width. */
+  body[data-page="home"] .statement-text { font-size: 19px; }
+  body[data-page="home"] .statement { padding-left: 14px; padding-right: 14px; }
 }
 @media (max-width: 560px) {
   .hero-bottom { flex-direction: column; align-items: flex-start; bottom: 110px; }
