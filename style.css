@@ -82,11 +82,20 @@ body[data-page="home"] .site-header { -webkit-backdrop-filter: none; backdrop-fi
 }
 
 /* ---------- hero (home) ---------- */
-.hero { position: relative; height: 100svh; min-height: 560px; overflow: hidden; }
+.hero { position: relative; height: 100svh; min-height: 560px; overflow: hidden; isolation: isolate; }
 .hero-media { position: absolute; inset: 0; }
+/* Slight radial blur on the hero video: sharp at the center logo, softer toward the edges. */
+.hero-media::after {
+  content: ""; position: absolute; inset: 0;
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, transparent 32%, #000 78%);
+  -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, transparent 32%, #000 78%);
+}
 .hero-media video, .hero-media img { transform: scale(1.06); animation: hero-settle 2.4s var(--ease) both; }
 .hero-wm { position: absolute; inset: 0; background: url(assets/watermark.png) center / auto 100% no-repeat; pointer-events: none; }
-.hero-crest { position: absolute; left: 50%; top: 50%; height: clamp(170px, 30svh, 330px); aspect-ratio: 800 / 936; transform: translate(-50%, -50%); pointer-events: none; }
+/* TEMP (Nov 3): big background crest hidden at James's request - delete this rule to bring it back. */
+.hero-wm { display: none; }
+.hero-crest { mix-blend-mode: difference; position: absolute; left: 50%; top: 50%; height: clamp(170px, 30svh, 330px); aspect-ratio: 800 / 936; transform: translate(-50%, -50%); pointer-events: none; }
 .hero-crest > * { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 @keyframes hero-settle { from { transform: scale(1.12); } to { transform: scale(1.06); } }
 .hero-grain { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.15) 45%, rgba(0,0,0,0.25) 100%); }
