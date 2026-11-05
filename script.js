@@ -570,6 +570,7 @@
       ${A.note ? `<section class="about-note reveal" style="--d:.1s"><img src="${esc(A.note)}" alt="Handwritten note from James: Hey, my name is Jimmy, or whatever you wanna call me. Ever since I was ten I have been obsessed with one thing: making movies, and now I have that opportunity. But as much as I like making my own projects, I love other people doing what I love most - filmmaking. So if you have any questions or want to work together, reach out!" loading="lazy"></section>` : ""}
       <section class="about-body">
         ${A.body.map((p, i) => `<p class="reveal" style="--d:${i * 0.1}s">${esc(p)}</p>`).join("")}
+        ${(A.storySig || (window.ABOUT_IMAGES && window.ABOUT_IMAGES.storySig)) ? `<img class="about-story-sig reveal" style="--d:.25s" src="${esc((window.ABOUT_IMAGES && window.ABOUT_IMAGES.storySig) || A.storySig)}" alt="James Murphy signature">` : ""}
         <dl class="about-facts reveal" style="--d:.2s">
           ${A.facts.map((f) => `<div class="fact-row"><dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join("")}
         </dl>
