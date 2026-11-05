@@ -181,11 +181,14 @@ window.SITE = {
     headline: "Filmmaker.",
     statement: "It's kind of fun to do the impossible.",
     statementSig: "assets/disney-sig.webp",   // Walt Disney signature under the quote
+    storySig: null,             // James's signature under the story text - data-URI version is assets/about-story-sig-img.js
     body: [
-      "James Murphy is a filmmaker. He writes, directs, shoots and produces his own work across narrative fiction and documentary, and he documents the whole thing along the way.",
-      "He started young and never waited for permission. No crew, no budget, no problem. If there is a story he wants to tell, he finds a way to shoot it with whatever is in his hands, and he finishes it.",
-      "Every project is a bet on himself, and each one is bigger than the last. The goal is not one great film. The goal is a body of work.",
-      "He is based between Palm Beach and New York, and he is just getting started."
+      "I'm James. I'm in high school in South Florida, and I make movies.",
+      "I didn't wait for film school or permission. I started making films with my friends and we never stopped. One short became two, two became features, and somewhere along the way this stopped being a hobby.",
+      "I've done just about every job on a set. Director, producer, camera operator, AD, VFX, actor. Not for the credits. The film needed it, and somebody had to do it. When you make movies with your friends, you learn every job fast.",
+      "I make narrative films and documentaries. No music videos, no commercials. The documentary side is my favorite, because I get to document the whole thing: the planning, the disasters, the days everything goes wrong and the shot still gets made. The process is the point.",
+      "I split my life between New Jersey and South Florida, and I'm building a studio while I'm still in school. I'm not in a hurry. I just started early.",
+      "This site is the work so far. The best of it hasn't been shot yet."
     ],
     facts: [
       { label: "Based in",  value: "Palm Beach, Florida & New York, New York" },
