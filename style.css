@@ -351,6 +351,7 @@ body[data-page="home"] .site-header { -webkit-backdrop-filter: none; backdrop-fi
 .about-portrait .placeholder { height: 100%; }
 .about-hero-text { padding-bottom: 8px; }
 .about-body { padding: 0 var(--pad) 10vh; max-width: 860px; }
+.about-story-sig { height: clamp(64px, 9vw, 96px); width: auto; display: block; margin: -6px 0 28px; opacity: .92; }
 .about-body > p { font-size: clamp(16px, 1.7vw, 21px); line-height: 1.6; color: var(--ink-dim); margin-bottom: 28px; }
 .about-body > p:first-child { color: var(--ink); }
 .about-facts { margin: 48px 0; border-top: 1px solid var(--line); }
@@ -622,4 +623,4 @@ body[data-page="home"] .site-header { -webkit-backdrop-filter: none; backdrop-fi
 }
 @media (max-width: 560px) {
   .viewer-list-wrap { left: 16px; right: 16px; height: 34vh; }
-   }
+}
