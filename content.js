@@ -46,7 +46,7 @@ window.SITE = {
   brandStrip: [
     "15 CREDITS AT 16", "1.1M+ TOTAL VIEWS", "~1.7M HOURS WATCHED",
     "2 FEATURE FILMS", "8 SHORT FILMS", "1 DOCUMENTARY",
-    "11 PROJECTS", "FOUNDING APPERT FILMS"
+    "11 PROJECTS"
   ],
 
   /* ---------- HOME: STATEMENT (lights up word by word as you scroll) ---------- */
@@ -271,7 +271,7 @@ window.SITE = {
     wordmark: "James Murphy®",       // giant bottom wordmark
     location: "New York",         // shown next to the live clock
     timezone: "America/New_York",     // for the clock
-    copyright: "James Murphy & The Appert Company",
+    copyright: "James Murphy",
     socials: [
       { label: "Freelance", url: "freelance.html" },
       { label: "Resume",    url: "resume.html"    },
