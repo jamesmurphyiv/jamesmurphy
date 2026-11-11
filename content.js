@@ -133,7 +133,7 @@ window.SITE = {
       credits: [
         { role: "Director", name: "Austin Parenti" },
         { role: "Cinematographer", name: "Phil King" },
-        { role: "2nd Unit Camera Operator", name: "James Murphy" }
+        { role: "Second Unit Camera Operator (uncredited)", name: "James Murphy" }
       ] },
     { slug: "the-last-toy-store", title: "The Last Toy Store", type: "Short film", year: "2025", releaseDate: "2025-12-17",
       image: "assets/the-last-toy-store-card.jpg", videoUrl: "https://www.youtube.com/watch?v=why6EtoQpNQ",
