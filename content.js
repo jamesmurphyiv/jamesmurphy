@@ -81,7 +81,7 @@ window.SITE = {
      - credits: rows for the project page credits table.
      - url: optional external link ("View source" on its page). */
   projects: [
-    { slug: "kotor-ii-search-for-the-star-forge", title: "Knights of the Old Republic II: Search for the Star Forge", type: "Feature", year: "2026", unreleased: true, featured: false,
+    { slug: "kotor-ii-search-for-the-star-forge", title: "Knights of the Old Republic II: Search for the Star Forge", type: "Feature", year: "2027", unreleased: true, featured: false,
       videoLabel: "Watch teaser", videoUrl: "https://www.youtube.com/watch?v=b_h2gfT5H4Q", image: null, images: [],
       credits: [
         { role: "Director", name: "Austin Parenti" },
@@ -193,7 +193,7 @@ window.SITE = {
       "I'm James. I'm in high school in South Florida, and I make movies.",
       "I didn't wait for film school or permission. I started making films with my friends and we never stopped. One short became two, two became features, and somewhere along the way this stopped being a hobby.",
       "I've done just about every job on a set. Director, producer, camera operator, AD, VFX, actor. Not for the credits. The film needed it, and somebody had to do it. When you make movies with your friends, you learn every job fast.",
-      "I make narrative films and documentaries. No music videos, no commercials. The documentary side is my favorite, because I get to document the whole thing: the planning, the disasters, the days everything goes wrong and the shot still gets made. The process is the point.",
+      "I make narrative films and documentaries. No music videos, no commercials. The process is the point.",
       "I split my life between New Jersey and South Florida, and I'm building a studio while I'm still in school. I'm not in a hurry. I just started early.",
       "This site is the work so far. The best of it hasn't been shot yet."
     ],
