@@ -363,9 +363,9 @@
       S.projects.forEach((p) => { if (p.type && t.indexOf(p.type) < 0) t.push(p.type); });
       return t;
     }
-    const filmOrder = S.projects.slice().sort((a, b) => (b.year || "0").localeCompare(a.year || "0"));
-    const fppIdx = filmOrder.findIndex((p) => p.slug === "future-presence-passed");
-    if (fppIdx > 0) filmOrder.unshift(filmOrder.splice(fppIdx, 1)[0]);
+    // Film list follows the LinkedIn projects order; release years stay unchanged.
+    const linkedInOrder = ["kotor-ii-search-for-the-star-forge", "above-the-fold", "future-presence-passed", "kotor-escape-from-taris", "tales-of-mission-and-zaalbar", "the-legend-of-skunk-ape", "sky-guys", "the-last-toy-store", "midnight-justice-dawn-of-night-wraith", "my-best-friend-jay", "forging-iron-dusk", "iron-dusk"];
+    const filmOrder = S.projects.slice().sort((a, b) => linkedInOrder.indexOf(a.slug) - linkedInOrder.indexOf(b.slug));
     function filtered() {
       return filmOrder.filter((p) => state.filter === "All" || p.type === state.filter);
     }
