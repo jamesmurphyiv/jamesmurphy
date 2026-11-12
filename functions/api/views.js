@@ -3,6 +3,7 @@
 // Falls back to the verified manual tally when the key is missing or the API errors.
 
 const VIDEO_IDS = [
+  "b_h2gfT5H4Q", // KOTOR II official teaser
   "3Ff5KQgyAmA", // The Legend of Skunk Ape
   "9jMnqgMCKT4", // Midnight Justice: The Dawn of Night Wraith
   "SWSa8dvaCSM", // KOTOR: Escape from Taris (film)
@@ -41,7 +42,7 @@ export async function onRequestGet(context) {
   }
 
   const cache = caches.default;
-  const cacheKey = new Request("https://views-cache.internal/api/views");
+  const cacheKey = new Request("https://views-cache.internal/api/views-kotor2");
   const hit = await cache.match(cacheKey);
   if (hit) return hit;
 
