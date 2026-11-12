@@ -571,6 +571,20 @@
       <section class="about-body">
         ${A.body.map((p, i) => `<p class="reveal" style="--d:${i * 0.1}s">${esc(p)}</p>`).join("")}
         ${(A.storySig || (window.ABOUT_IMAGES && window.ABOUT_IMAGES.storySig)) ? `<img class="about-story-sig reveal" style="--d:.25s" src="${esc((window.ABOUT_IMAGES && window.ABOUT_IMAGES.storySig) || A.storySig)}" alt="James Murphy signature">` : ""}
+        <div class="about-ventures reveal">
+          <section class="about-network" aria-labelledby="hsf-title">
+            <p class="about-network-label">Founder / Community</p>
+            <h2 id="hsf-title">High School Filmmakers</h2>
+            <p>A network for young filmmakers to find collaborators, post projects and build a crew.</p>
+            <a class="text-link" href="https://highschoolfilmmakers.com/" target="_blank" rel="noopener">Find your people &rarr;</a>
+          </section>
+          <section class="about-network" aria-labelledby="appert-title">
+            <p class="about-network-label">Founder / Film company</p>
+            <h2 id="appert-title">Appert Films</h2>
+            <p>An independent film company producing original work and releasing films by emerging filmmakers.</p>
+            <a class="text-link" href="https://appertfilms.com/" target="_blank" rel="noopener">Explore Appert &rarr;</a>
+          </section>
+        </div>
         <dl class="about-facts reveal" style="--d:.2s">
           ${A.facts.map((f) => `<div class="fact-row"><dt>${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join("")}
         </dl>
