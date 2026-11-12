@@ -82,7 +82,7 @@ window.SITE = {
      - url: optional external link ("View source" on its page). */
   projects: [
     { slug: "kotor-ii-search-for-the-star-forge", title: "Knights of the Old Republic II: Search for the Star Forge", type: "Feature", year: "Jun-Aug 2026", unreleased: true, featured: false,
-      videoLabel: "Watch teaser", videoUrl: "https://www.youtube.com/watch?v=b_h2gfT5H4Q", image: "assets/1-kotor-teaser-candidate-1.jpg", images: ["assets/2-kotor-teaser-candidate-2.jpg", "assets/3-kotor-teaser-candidate-3.jpg"],
+      videoLabel: "Watch teaser", videoUrl: "https://www.youtube.com/watch?v=b_h2gfT5H4Q", image: "assets/assets/kotor-teaser-1.svg", images: ["assets/assets/kotor-teaser-2.svg", "assets/assets/kotor-teaser-3.svg"],
       credits: [
         { role: "Director", name: "Austin Parenti" },
         { role: "Cinematographer", name: "Phil King" },
