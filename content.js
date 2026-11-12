@@ -246,7 +246,10 @@ window.SITE = {
     resume: {
       title: "Resume",
       headline: "Resume.",
-      lines: ["The resume PDF drops right here, soon."]
+      lines: [],
+      image: "assets/james-murphy-resume.png",
+      pdf: "assets/James-Murphy-Resume.pdf",
+      pdfLabel: "Download PDF"
     }
   },
 
