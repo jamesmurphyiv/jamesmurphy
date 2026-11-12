@@ -641,6 +641,8 @@
         <p class="hero-eyebrow rise" style="--d:.05s">${esc(S.name)}</p>
         <h1 class="hero-headline rise" style="--d:.15s">${esc(P.headline)}</h1>
         <div class="simple-body">
+          ${P.image ? `<p class="reveal resume-sheet" style="--d:.25s"><img src="${esc(P.image)}" alt="${esc(S.name)} resume" style="width:100%;max-width:820px;height:auto;display:block;background:#fff"></p>` : ""}
+          ${P.pdf ? `<p class="reveal" style="--d:.35s"><a class="btn-outline" href="${esc(P.pdf)}" download>${esc(P.pdfLabel || "Download PDF")}</a></p>` : ""}
           ${(P.lines || []).map((l, i) => `<p class="reveal" style="--d:${(0.25 + i * 0.1).toFixed(2)}s">${esc(l)}</p>`).join("")}
           <p class="reveal" style="--d:.5s"><a class="text-link" href="#contact" data-open-contact>Get in touch &rarr;</a></p>
         </div>
