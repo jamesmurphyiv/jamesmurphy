@@ -624,3 +624,16 @@ body[data-page="home"] .site-header { -webkit-backdrop-filter: none; backdrop-fi
 @media (max-width: 560px) {
   .viewer-list-wrap { left: 16px; right: 16px; height: 34vh; }
 }
+
+/* Founder projects - About page */
+.about-ventures { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin: 56px 0 0; padding: 32px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.about-network { display: flex; flex-direction: column; align-items: flex-start; }
+.about-network-label { margin: 0 0 16px; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); }
+.about-network h2 { margin: 0 0 16px; font-size: clamp(28px, 3vw, 36px); line-height: 1.1; font-weight: 600; letter-spacing: -.035em; }
+.about-network > p:not(.about-network-label) { margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: var(--ink-dim); }
+.about-network .text-link { margin-top: auto; }
+.about-ventures + .about-facts { margin-top: 0; border-top: 0; }
+@media (max-width: 600px) {
+  .about-ventures { grid-template-columns: 1fr; gap: 32px; }
+  .about-network + .about-network { border-top: 1px solid var(--line); padding-top: 32px; }
+}
