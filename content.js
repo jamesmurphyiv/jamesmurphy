@@ -81,6 +81,13 @@ window.SITE = {
      - credits: rows for the project page credits table.
      - url: optional external link ("View source" on its page). */
   projects: [
+    { slug: "kotor-ii-search-for-the-star-forge", title: "Knights of the Old Republic II: Search for the Star Forge", type: "Feature", year: "2026", unreleased: true, featured: false,
+      videoLabel: "Watch teaser", videoUrl: "https://www.youtube.com/watch?v=b_h2gfT5H4Q", image: null, images: [],
+      credits: [
+        { role: "Director", name: "Austin Parenti" },
+        { role: "Cinematographer", name: "Phil King" },
+        { role: "First Assistant Camera Operator", name: "James Murphy" }
+      ] },
     { slug: "the-legend-of-skunk-ape", title: "The Legend of Skunk Ape", type: "Short film", year: "2026", releaseDate: "2026-05-14",
       image: "assets/the-legend-of-skunk-ape-card.jpg", videoUrl: "https://www.youtube.com/watch?v=3Ff5KQgyAmA&t=12s",
       images: ["assets/the-legend-of-skunk-ape-1.jpg", "assets/the-legend-of-skunk-ape-2.jpg", "assets/the-legend-of-skunk-ape-3.jpg", "assets/the-legend-of-skunk-ape-4.jpg", "assets/the-legend-of-skunk-ape-5.jpg", "assets/the-legend-of-skunk-ape-6.jpg"],
