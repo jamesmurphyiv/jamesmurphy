@@ -350,7 +350,7 @@
       <div class="overview" id="overview" aria-hidden="true">
         <button class="viewer-navbtn overview-back" id="overviewBack">&larr; Back</button>
         <div class="overview-table-wrap">
-          <div class="overview-head"><span>Year</span><span>Title</span><span></span></div>
+          <div class="overview-head"><span>Shoot dates</span><span>Title</span><span></span></div>
           <ul class="overview-list" id="overviewList"></ul>
         </div>
         <div class="overview-preview" id="overviewPreview"></div>
@@ -499,7 +499,7 @@
 
     const metaRows = [
       p.type ? { role: "Type", name: p.type } : null,
-      p.year ? { role: "Year", name: p.year } : null,
+      p.year ? { role: "Shoot dates", name: p.year } : null,
       p.unreleased ? { role: "Status", name: "Unreleased" } : null
     ].filter(Boolean);
     const rows = metaRows.concat(p.credits || []);
