@@ -191,9 +191,8 @@ window.SITE = {
       "This site is the work so far. The best of it hasn't been shot yet."
     ],
     facts: [
-      { label: "Based in",  value: "Palm Beach, Florida & New York, New York" },
-      { label: "Focus",     value: "Narrative fiction, documentary" },
-      { label: "Studio",    value: "Appert Films" },
+      { label: "Based in",  value: "Palm Beach, Florida & New Jersey" },
+      { label: "Focus",     value: "Narrative shorts, narrative features, documentary" },
       { label: "Contact",   value: "jmurphy@appertfilms.com" }
     ],
     linkLabel: "Get in touch"   // opens the contact popup
