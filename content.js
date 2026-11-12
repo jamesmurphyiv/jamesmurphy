@@ -46,7 +46,7 @@ window.SITE = {
   brandStrip: [
     "15 CREDITS AT 16", "1.1M+ TOTAL VIEWS", "~1.7M HOURS WATCHED",
     "2 FEATURE FILMS", "8 SHORT FILMS", "1 DOCUMENTARY",
-    "11 PROJECTS", "FOUNDING APPERT FILMS"
+    "12 PROJECTS", "FOUNDING APPERT FILMS"
   ],
 
   /* ---------- HOME: STATEMENT (lights up word by word as you scroll) ---------- */
