@@ -300,7 +300,7 @@
           <a class="text-link" href="film.html">${esc(S.featuredLinkLabel)} &rarr;</a>
         </div>
         <div class="films-grid">
-          ${S.projects.slice(0, S.featuredCount || 4).map((p, i) => `
+          ${S.projects.filter((p) => p.featured !== false).slice(0, S.featuredCount || 4).map((p, i) => `
             <a class="film-card reveal" style="--d:${i * 0.08}s" href="${projectUrl(p)}">
               ${mediaHTML(p, "film-thumb", p.title + " - still")}
               <div class="film-meta">
@@ -490,7 +490,7 @@
             <button class="cinema-poster" id="cinemaPlay" aria-label="Play ${esc(p.title)}">
               <img src="${esc(p.image || ytThumb(p.videoUrl))}" alt="" fetchpriority="high">
               <span class="cinema-play-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
-              <span class="cinema-poster-caption">Watch film</span>
+              <span class="cinema-poster-caption">${esc(p.videoLabel || "Watch film")}</span>
             </button>
           </div>
           <div class="cinema-caption"><span>${esc(p.title)}</span><a href="${esc(p.videoUrl)}" target="_blank" rel="noopener">YouTube &nearr;</a></div>
@@ -506,7 +506,7 @@
 
     root.innerHTML = `
       <button class="project-close" id="projectClose" aria-label="Back to films">&times;</button>
-      <section class="project-hero">
+      <section class="project-hero${p.videoLabel ? " project-teaser" : ""}">
         <h1 class="project-title rise" style="--d:.05s">${esc(p.title)}</h1>
         <p class="project-meta rise" style="--d:.15s">${esc([p.type, p.year].filter(Boolean).join(", "))}${p.unreleased ? (p.type || p.year ? ", " : "") + "Unreleased" : ""}</p>
         <div class="project-main">
@@ -520,14 +520,14 @@
           </aside>
         </div>
       </section>
-      <section class="project-images">
+      ${(p.images || []).some(Boolean) ? `<section class="project-images">
         <h2 class="reveal">Images</h2>
         <div class="project-images-grid">
           ${(p.images || []).map((img, i) => img
             ? `<div class="pi-cell reveal" style="--d:${i * 0.06}s"><img src="${esc(img)}" alt="${esc(p.title)} still ${i + 1}" loading="lazy"></div>`
             : `<div class="pi-cell reveal" style="--d:${i * 0.06}s"><div class="placeholder"><span class="ph-label">${esc(p.title)} - still ${i + 1}</span></div></div>`).join("")}
         </div>
-      </section>
+      </section>` : ""}
       <nav class="project-pn reveal">
         <a class="pn-prev" href="${projectUrl(prev)}"><span>Previous project</span><strong>${esc(prev.title)}</strong></a>
         <a class="pn-next" href="${projectUrl(next)}"><span>Next project</span><strong>${esc(next.title)}</strong></a>
