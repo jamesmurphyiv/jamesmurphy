@@ -88,7 +88,7 @@ window.SITE = {
         { role: "Cinematographer", name: "Phil King" },
         { role: "First Assistant Camera Operator", name: "James Murphy" }
       ] },
-    { slug: "the-legend-of-skunk-ape", title: "The Legend of Skunk Ape", type: "Short film", year: "Jan 2026", releaseDate: "2026-05-14",
+    { slug: "the-legend-of-skunk-ape", title: "Legend of the Skunk Ape", type: "Short film", year: "Jan 2026", releaseDate: "2026-05-14",
       image: "assets/the-legend-of-skunk-ape-card.jpg", videoUrl: "https://www.youtube.com/watch?v=3Ff5KQgyAmA&t=12s",
       images: ["assets/the-legend-of-skunk-ape-1.jpg", "assets/the-legend-of-skunk-ape-2.jpg", "assets/the-legend-of-skunk-ape-3.jpg", "assets/the-legend-of-skunk-ape-4.jpg", "assets/the-legend-of-skunk-ape-5.jpg", "assets/the-legend-of-skunk-ape-6.jpg"],
       credits: [
